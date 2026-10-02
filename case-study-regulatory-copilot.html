@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary meta -->
+  <title>Regulatory Intelligence Copilot — Product Case Study | Abhishek Sachdeva</title>
+  <meta name="description" content="Product case study: a grounded, traceable AI copilot for RBI KYC compliance research at Indian NBFCs. From problem discovery to retrieval evaluation, iterations and guardrails." />
+  <meta name="author" content="Abhishek Sachdeva" />
+  <link rel="canonical" href="https://YOUR_VERCEL_DOMAIN/case-study-regulatory-copilot.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Regulatory Intelligence Copilot — Product Case Study" />
+  <meta property="og:description" content="Grounded, traceable AI research for RBI KYC compliance teams. Discovery, MVP scoping, RAG architecture, evaluation and iteration." />
+  <meta property="og:url" content="https://YOUR_VERCEL_DOMAIN/case-study-regulatory-copilot.html" />
+  <meta property="og:site_name" content="Abhishek Sachdeva Portfolio" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Regulatory Intelligence Copilot — Product Case Study" />
+  <meta name="twitter:description" content="From problem discovery to retrieval evaluation: a grounded AI copilot for RBI KYC compliance research." />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ======================= HEADER / NAV ======================= -->
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Abhishek Sachdeva — home">
+        <span class="brand-mark" aria-hidden="true">AS</span>
+        Abhishek Sachdeva
+      </a>
+
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open menu"
+      ><span aria-hidden="true"></span></button>
+
+      <ul class="nav-links" id="primary-nav" data-nav-menu>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#products">AI Products</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= CASE STUDY HERO ======================= -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <div class="shell">
+        <div class="cs-topbar">
+          <a class="back-link" href="index.html#products" aria-label="Back to portfolio">
+            <span aria-hidden="true">←</span> Back to Portfolio
+          </a>
+          <div class="btn-row">
+            <!-- PLACEHOLDER: replace href with the deployed Streamlit app URL -->
+            <a class="btn btn--ghost btn--sm" href="https://regulatory-intelligence-copilot-ezc6ahmhhs6vjjnjoy7iz9.streamlit.app/" rel="noopener noreferrer" target="_blank">Try Live Product</a>
+            <!-- PLACEHOLDER: replace href with the public GitHub repo URL -->
+            <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/regulatory-intelligence-copilot" rel="noopener noreferrer" target="_blank">View GitHub</a>
+          </div>
+        </div>
+
+        <span class="card-tag">Product Case Study · MVP Shipped &amp; Evaluated</span>
+        <h1 id="cs-title">Regulatory Intelligence Copilot</h1>
+        <p class="cs-subtitle">
+          Grounded, traceable regulatory research for compliance teams in Indian
+          financial services — MVP scoped to RBI KYC requirements, combining the
+          regulatory corpus with simulated internal policies. Built, evaluated
+          and iterated end-to-end.
+        </p>
+
+        <dl class="cs-facts">
+          <div>
+            <dt>Primary user</dt>
+            <dd>Compliance Analyst / Manager @ Indian NBFC</dd>
+          </div>
+          <div>
+            <dt>Policy domain</dt>
+            <dd>RBI KYC / Customer Due Diligence</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>MVP shipped · live demo · evaluated</dd>
+          </div>
+          <div>
+            <dt>Principles</dt>
+            <dd>Current · Applicable · Authoritative · Traceable</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ======================= CASE STUDY BODY ======================= -->
+    <div class="shell cs-layout">
+
+      <!-- TOC -->
+      <nav class="cs-toc" aria-label="Case study contents">
+        <p>Contents</p>
+        <ol>
+          <li><a data-toc-link href="#executive-summary">Executive Summary</a></li>
+          <li><a data-toc-link href="#problem">Problem</a></li>
+          <li><a data-toc-link href="#target-user">Target User</a></li>
+          <li><a data-toc-link href="#jtbd">Jobs To Be Done</a></li>
+          <li><a data-toc-link href="#discovery">Product Discovery</a></li>
+          <li><a data-toc-link href="#workflow">Current Workflow</a></li>
+          <li><a data-toc-link href="#pain-points">Key Pain Points</a></li>
+          <li><a data-toc-link href="#goal">Product Goal</a></li>
+          <li><a data-toc-link href="#mvp-scope">MVP Scope</a></li>
+          <li><a data-toc-link href="#requirements">Product Requirements</a></li>
+          <li><a data-toc-link href="#user-journey">User Journey</a></li>
+          <li><a data-toc-link href="#solution">Solution</a></li>
+          <li><a data-toc-link href="#architecture">AI / RAG Architecture</a></li>
+          <li><a data-toc-link href="#data-strategy">Data Strategy</a></li>
+          <li><a data-toc-link href="#regulatory-sources">Regulatory Sources</a></li>
+          <li><a data-toc-link href="#internal-policies">Simulated Internal Policies</a></li>
+          <li><a data-toc-link href="#retrieval">Retrieval &amp; Generation Approach</a></li>
+          <li><a data-toc-link href="#eval-strategy">AI Evaluation Strategy</a></li>
+          <li><a data-toc-link href="#baseline-eval">Baseline Evaluation</a></li>
+          <li><a data-toc-link href="#failure-analysis">Failure Analysis</a></li>
+          <li><a data-toc-link href="#iterations">Product Iterations</a></li>
+          <li><a data-toc-link href="#post-eval">Post-improvement Evaluation</a></li>
+          <li><a data-toc-link href="#guardrails">AI Guardrails</a></li>
+          <li><a data-toc-link href="#risks">Risks &amp; Mitigations</a></li>
+          <li><a data-toc-link href="#metrics">Success Metrics</a></li>
+          <li><a data-toc-link href="#roadmap">MVP Roadmap</a></li>
+          <li><a data-toc-link href="#decisions">Key Product Decisions</a></li>
+          <li><a data-toc-link href="#tradeoffs">Trade-offs</a></li>
+          <li><a data-toc-link href="#lessons">What I Learned</a></li>
+          <li><a data-toc-link href="#future">Future Opportunities</a></li>
+        </ol>
+      </nav>
+
+      <!-- CONTENT -->
+      <div class="cs-content">
+
+        <!-- 01 Executive Summary -->
+        <section class="cs-section" id="executive-summary" data-section aria-labelledby="es-title">
+          <span class="section-number">01</span>
+          <h2 id="es-title">Executive Summary</h2>
+          <p>
+            Compliance teams in Indian financial firms answer a constant stream
+            of questions like <em>"what's the current KYC review period?"</em> or
+            <em>"can we rely on an external KYC audit?"</em>. Each answer requires
+            cross-checking a shifting set of RBI regulations — a master direction
+            dating back to 2016, recent 2024 and 2025 amendments — against the
+            firm's own internal policies, and then producing a reply the business
+            can act on with confidence.
+          </p>
+          <p>
+            <strong>Regulatory Intelligence Copilot</strong> is an AI-assisted
+            regulatory research product built for that job. The MVP focuses on
+            RBI KYC requirements and pairs the regulatory corpus with simulated
+            internal policies so answers are <em>grounded and traceable</em> rather
+            than fluent and expendable.
+          </p>
+          <p>
+            The product was designed, built and evaluated end-to-end. Retrieval
+            quality improved from a baseline <strong>Hit@1 of 0.718 to 0.872</strong> and
+            <strong>MRR from 0.843 to 0.927</strong> through focused iterations on
+            freshness, source routing and evidence selection. Generation
+            evaluation was partially completed due to API quota constraints — an
+            outcome reported transparently rather than papered over.
+          </p>
+          <div class="callout callout--note">
+            <span class="callout-label">Scope note</span>
+            <p>
+              Internal policy documents used in this portfolio product are
+              simulated stand-ins, clearly labeled as such, because a real NBFC
+              would never expose proprietary policies. Regulatory sources are the
+              genuine, current RBI materials.
+            </p>
+          </div>
+        </section>
+
+        <!-- 02 Problem -->
+        <section class="cs-section" id="problem" data-section aria-labelledby="problem-title">
+          <span class="section-number">02</span>
+          <h2 id="problem-title">Problem</h2>
+          <p>
+            Regulatory research in India is fragmented across documents that are
+            constantly in motion. A compliance question touches the 2016 RBI
+            Master Direction, the November 2024 amendment, the June 2025
+            amendment, published FAQs, and the firm's own internal policy —
+            which must itself be evaluated against all of the above.
+          </p>
+          <p>
+            The result: answers are slow, inconsistently sourced, and hard to
+            defend. When a compliance analyst replies to the business, what they
+            are really selling is <em>confidence</em>. Today that confidence is built
+            by hand, one Ctrl-F at a time.
+          </p>
+          <div class="callout callout--problem">
+            <span class="callout-label">The problem in one line</span>
+            <p>
+              Compliance teams can't reliably find the <em>current, applicable,
+              authoritative</em> regulatory position — with proof — fast enough to
+              serve the business.
+            </p>
+          </div>
+        </section>
+
+        <!-- 03 Target User -->
+        <section class="cs-section" id="target-user" data-section aria-labelledby="user-title">
+          <span class="section-number">03</span>
+          <h2 id="user-title">Target User</h2>
+          <p>
+            <strong>Compliance Analyst / Compliance Manager at an Indian NBFC</strong>
+            (Non-Banking Financial Company).
+          </p>
+          <p>
+            They are the research layer of the compliance function. Business and
+            product teams come to them with questions; regulators expect the firm
+            to be able to demonstrate why a given practice is compliant. The
+            analyst is measured on the <em>correctness and traceability</em> of the
+            answers they give, not their speed alone.
+          </p>
+          <p>
+            They are time-starved, skeptical of anything they can't verify, and
+            accountable for getting it right. Any tool that answers must also
+            show its work.
+          </p>
+        </section>
+
+        <!-- 04 JTBD -->
+        <section class="cs-section" id="jtbd" data-section aria-labelledby="jtbd-title">
+          <span class="section-number">04</span>
+          <h2 id="jtbd-title">Jobs To Be Done</h2>
+          <blockquote class="callout callout--solution">
+            <span class="callout-label">Core JTBD</span>
+            <p>
+              "When I receive a compliance-related business query, I want to
+              quickly identify the current applicable regulatory and internal
+              requirements, along with their authoritative sources, so that I can
+              provide a reliable and traceable response."
+            </p>
+          </blockquote>
+          <p>Sub-jobs the product supports:</p>
+          <ul>
+            <li>Confirm what regulation says <em>today</em>, including recent amendments.</li>
+            <li>Decide whether internal policy alone is sufficient or whether regulation supersedes it.</li>
+            <li>Produce an answer with the exact provision(s) cited — ready to paste into a reply.</li>
+            <li>Know when the documents genuinely don't answer the question.</li>
+          </ul>
+          <p>
+            Notably, the measure of success is <strong>a traceable answer</strong>, not a
+            chatbot conversation. That shapes every downstream product decision.
+          </p>
+        </section>
+
+        <!-- 05 Discovery -->
+        <section class="cs-section" id="discovery" data-section aria-labelledby="discovery-title">
+          <span class="section-number">05</span>
+          <h2 id="discovery-title">Product Discovery</h2>
+          <p>
+            Discovery followed a JTBD lens: start from the job, back into the
+            information flows that serve it, and pressure-test where AI adds
+            durable value versus where it's decoration.
+          </p>
+          <ul>
+            <li>
+              <strong>Mapped the domain.</strong> RBI KYC/Customer Due Diligence
+              rules were read and structured as a small knowledge graph: master
+              direction, amendments, FAQs, and the points where each layer
+              supersedes or clarifies the other.
+            </li>
+            <li>
+              <strong>Studied the amendment lifecycle.</strong> The Nov 2024 and
+              Jun 2025 amendments don't replace the 2016 master direction — they
+              layer over it. Knowing which document "wins" on a given topic is
+              the core of the analyst's craft, and the hardest part to automate
+              correctly.
+            </li>
+            <li>
+              <strong>Framed the internal/regulatory boundary.</strong> Firms
+              operationalize RBI rules through their own policies. The true job
+              is often "what does the firm require, and is it compliant with
+              what RBI requires" — a two-layer question.
+            </li>
+            <li>
+              <strong>Studied evaluation as a first-class concern.</strong> This
+              is an answer-quality problem, so success criteria (retrieval
+              metrics, citation accuracy) were defined before building, not after.
+            </li>
+          </ul>
+          <div class="callout callout--note">
+            <span class="callout-label">Full transparency</span>
+            <p>
+              <strong>Regulatory Intelligence Copilot is an independent AI product portfolio project.</strong> It is never presented as Deloitte, Wipro, HCL or client work. Discovery drew on public
+              RBI materials, the compliance workflow narrative common across
+              Indian financial services, and the product principles below — and
+              stands in for a live-enterprise discovery. Internal documents are
+              simulated stand-ins, as flagged throughout.
+            </p>
+          </div>
+        </section>
+
+        <!-- 06 Current Workflow -->
+        <section class="cs-section" id="workflow" data-section aria-labelledby="workflow-title">
+          <span class="section-number">06</span>
+          <h2 id="workflow-title">Current Compliance Workflow</h2>
+          <ol class="workflow">
+            <li>
+              <strong>A query arrives.</strong>
+              <span>Business/product asks Compliance a question, typically in chat or email.</span>
+            </li>
+            <li>
+              <strong>Manual search.</strong>
+              <span>The analyst opens the RBI master direction, amendment PDFs and FAQs and searches by keyword.</span>
+            </li>
+            <li>
+              <strong>Cross-document reconciliation.</strong>
+              <span>They piece together which provision is current after each amendment — the error-prone step.</span>
+            </li>
+            <li>
+              <strong>Internal policy check.</strong>
+              <span>They pull the firm's KYC policy and judge whether it operationalizes, tightens or conflicts with regulation.</span>
+            </li>
+            <li>
+              <strong>Draft answer.</strong>
+              <span>An answer is drafted, typically with the provision(s) cited by section number.</span>
+            </li>
+            <li>
+              <strong>Review.</strong>
+              <span>A senior compliance member sanity-checks before the reply goes out.</span>
+            </li>
+          </ol>
+          <p>
+            Speed is bounded by documents, not expertise. The analyst is
+            competent; the process is not.
+          </p>
+        </section>
+
+        <!-- 07 Pain Points -->
+        <section class="cs-section" id="pain-points" data-section aria-labelledby="pain-title">
+          <span class="section-number">07</span>
+          <h2 id="pain-title">Key Pain Points</h2>
+          <div class="point-grid">
+            <div class="point-card">
+              <span class="point-index">P1</span>
+              <h4>It's hard to know what's current</h4>
+              <p>Amendments stack on a 2016 master direction. Without careful tracking, an analyst can quote superseded language.</p>
+            </div>
+            <div class="point-card">
+              <span class="point-index">P2</span>
+              <h4>Sources are fragmented</h4>
+              <p>Rules live across directions, amendments and FAQs — none of which a keyword search glues together into an answer.</p>
+            </div>
+            <div class="point-card">
+              <span class="point-index">P3</span>
+              <h4>Answers need evidence</h4>
+              <p>Every claim needs a citable provision. Winning the answer is wasted if you can't win the citation.</p>
+            </div>
+            <div class="point-card">
+              <span class="point-index">P4</span>
+              <h4>Internal vs regulatory is murky</h4>
+              <p>Analysts must reconcile firm policy with regulation — and say which one applies when they differ.</p>
+            </div>
+            <div class="point-card">
+              <span class="point-index">P5</span>
+              <h4>Ambiguity burns time</h4>
+              <p>Many queries are imprecise. Deciding what the question actually means is manual and slow.</p>
+            </div>
+            <div class="point-card">
+              <span class="point-index">P6</span>
+              <h4>Quiet refusal is hard</h4>
+              <p>When documents don't answer a question, analysts still have to say something — and "we don't know" is hard to staff.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 08 Product Goal -->
+        <section class="cs-section" id="goal" data-section aria-labelledby="goal-title">
+          <span class="section-number">08</span>
+          <h2 id="goal-title">Product Goal</h2>
+          <p>
+            Turn hours of cross-document research into a <em>minutes-scale</em>
+            traceable answer — with the same (or better) confidence a senior
+            analyst would demand, and a clear, honest "insufficient evidence"
+            response when the corpus can't support an answer.
+          </p>
+          <div class="callout callout--solution">
+            <span class="callout-label">Goal statement</span>
+            <p>
+              "Answer compliance research queries on RBI KYC requirements with
+              grounded responses that cite the current, applicable and
+              authoritative sources — and explicitly flag when the evidence is
+              insufficient."
+            </p>
+          </div>
+        </section>
+
+        <!-- 09 MVP Scope -->
+        <section class="cs-section" id="mvp-scope" data-section aria-labelledby="scope-title">
+          <span class="section-number">09</span>
+          <h2 id="scope-title">MVP Scope</h2>
+          <p>
+            The MVP deliberately confines itself to what proves the core job:
+            grounded answers with citations on RBI KYC, plus simulated internal
+            policies to exercise the two-layer case. Everything else is carved
+            out on purpose.
+          </p>
+          <div class="scope-grid">
+            <div class="scope-col is-in">
+              <h4>In scope (MVP)</h4>
+              <ul>
+                <li>RBI KYC / Customer Due Diligence corpus (real regulatory docs)</li>
+                <li>Four simulated internal NBFC policies (labeled as such)</li>
+                <li>Grounded Q&amp;A with citations for every claim</li>
+                <li>Evidence selection across regulatory and internal sources</li>
+                <li>Freshness/amendment-aware ranking</li>
+                <li>Insufficient-evidence behavior</li>
+                <li>An evaluation harness and golden-question dataset</li>
+              </ul>
+            </div>
+            <div class="scope-col is-out">
+              <h4>Out of scope (by design)</h4>
+              <ul>
+                <li>Regulatory filing</li>
+                <li>Autonomous compliance decisions</li>
+                <li>Approval workflows</li>
+                <li>Authentication / RBAC</li>
+                <li>PII processing</li>
+                <li>User-uploaded documents</li>
+                <li>Multi-agent architecture</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            Each exclusion is a conscious product decision (see
+            <a href="#decisions">Key Product Decisions</a>) — not an omission.
+          </p>
+        </section>
+
+        <!-- 10 Requirements -->
+        <section class="cs-section" id="requirements" data-section aria-labelledby="req-title">
+          <span class="section-number">10</span>
+          <h2 id="req-title">Product Requirements</h2>
+          <p>Translated the goal into requirement statements, each independently testable:</p>
+          <ol class="req-list">
+            <li><span class="req-id">PR-01</span><span>The system shall answer questions grounded in the ingested RBI KYC corpus and simulated internal policies only.</span></li>
+            <li><span class="req-id">PR-02</span><span>Every substantive claim shall carry a citation resolving to an ingested source document and provision.</span></li>
+            <li><span class="req-id">PR-03</span><span>Currentness shall be determined by document type and date, so that amendment language takes precedence over superseded text.</span></li>
+            <li><span class="req-id">PR-04</span><span>The system shall separate regulatory from internal-policy evidence and disclose which is being cited.</span></li>
+            <li><span class="req-id">PR-05</span><span>When no sufficient evidence exists, the system shall state that explicitly and not fabricate an answer.</span></li>
+            <li><span class="req-id">PR-06</span><span>Simulated internal policies shall be unmistakably labeled as such in every surfaced result.</span></li>
+            <li><span class="req-id">PR-07</span><span>Answers shall be research-support only, with a visible disclaimer that they are not a legal/compliance opinion.</span></li>
+            <li><span class="req-id">PR-08</span><span>Evaluation shall measure retrieval and generation quality against a fixed golden-question dataset.</span></li>
+          </ol>
+        </section>
+
+        <!-- 11 User Journey -->
+        <section class="cs-section" id="user-journey" data-section aria-labelledby="journey-title">
+          <span class="section-number">11</span>
+          <h2 id="journey-title">User Journey</h2>
+          <div class="journey">
+            <div class="journey-step"><strong>Ask</strong><span>Analyst types the business query in plain language.</span></div>
+            <div class="journey-step"><strong>Retrieve</strong><span>System routes and retrieves candidate evidence from the corpus.</span></div>
+            <div class="journey-step"><strong>Ground</strong><span>Evidence is selected and checked against citation requirements.</span></div>
+            <div class="journey-step"><strong>Read</strong><span>Grounded answer with per-claim citations renders, sources clearly typed.</span></div>
+            <div class="journey-step"><strong>Verify</strong><span>Analyst opens the cited provisions, traces reasoning, decides.</span></div>
+            <div class="journey-step"><strong>Reply</strong><span>Trustworthy answer, ready to carry the analyst's own review.</span></div>
+          </div>
+          <p>
+            The journey ends at <em>verify</em>, not at <em>auto-send</em>. The product is a
+            research accelerator with a human in the loop — because the analyst
+            owns accountability.
+          </p>
+        </section>
+
+        <!-- 12 Solution -->
+        <section class="cs-section" id="solution" data-section aria-labelledby="solution-title">
+          <span class="section-number">12</span>
+          <h2 id="solution-title">Solution</h2>
+          <p>
+            A retrieval-augmented question-answering product: a Streamlit web
+            app backed by an embedding + vector store + LLM pipeline that
+            retrieves grounded evidence, reasons over it, and returns
+            <em>answers with citations</em>.
+          </p>
+          <p>
+            The design centers on four product principles applied to every
+            feature decision:
+          </p>
+          <div class="principle" style="margin-bottom:0.35rem">Current</div>
+          <p style="margin-bottom:1rem">— the answer reflects the latest amendment state.</p>
+          <div class="principle" style="margin-bottom:0.35rem">Applicable</div>
+          <p style="margin-bottom:1rem">— the right layer (regulatory vs internal) is surfaced for the question.</p>
+          <div class="principle" style="margin-bottom:0.35rem">Authoritative</div>
+          <p style="margin-bottom:1rem">— answers only come from the corpus, never from the model's general knowledge.</p>
+          <div class="principle" style="margin-bottom:0.35rem">Traceable</div>
+          <p>— every claim maps to a cited provision the analyst can open and verify.</p>
+        </section>
+
+        <!-- 13 Architecture -->
+        <section class="cs-section" id="architecture" data-section aria-labelledby="arch-title">
+          <span class="section-number">13</span>
+          <h2 id="arch-title">AI / RAG Architecture</h2>
+          <p>
+            A single, understandable retrieval-augmented pipeline — deliberately
+            avoiding multi-agent complexity at MVP stage.
+          </p>
+
+          <div class="flow" role="img" aria-label="RAG architecture diagram">
+            <div class="flow-step is-accent">
+              <span class="step-num">1</span>
+              <span class="step-name">Question</span>
+              <span class="step-detail">Analyst query in plain language</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-step">
+              <span class="step-num">2</span>
+              <span class="step-name">Query understanding<br />/ source routing</span>
+              <span class="step-detail">Detect regulatory vs internal intent</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-step">
+              <span class="step-num">3</span>
+              <span class="step-name">BGE embeddings</span>
+              <span class="step-detail">BAAI/bge-base-en-v1.5</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-step">
+              <span class="step-num">4</span>
+              <span class="step-name">Chroma vector retrieval</span>
+              <span class="step-detail">Similarity search over corpus</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-step">
+              <span class="step-num">5</span>
+              <span class="step-name">Evidence selection</span>
+              <span class="step-detail">Re-rank &amp; validate candidates</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-step">
+              <span class="step-num">6</span>
+              <span class="step-name">Groq LLM</span>
+              <span class="step-detail">openai/gpt-oss-120b</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-step">
+              <span class="step-num">7</span>
+              <span class="step-name">Grounded response</span>
+              <span class="step-detail">Answer from evidence only</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-step is-output">
+              <span class="step-num">8</span>
+              <span class="step-name">Citations / supporting evidence</span>
+              <span class="step-detail">Traceable, verifiable output</span>
+            </div>
+          </div>
+
+          <p class="flow-caption">Frontend: Streamlit · Deployment: Streamlit Community Cloud.</p>
+
+          <p>
+            The routing step (2) is where product thinking lives: not every
+            question targets the same source set. Freshness-aware ranking and
+            regulatory-vs-internal routing were <em>the</em> two highest-leverage
+            product decisions in the stack (see
+            <a href="#iterations">Iterations</a>).
+          </p>
+        </section>
+
+        <!-- 14 Data Strategy -->
+        <section class="cs-section" id="data-strategy" data-section aria-labelledby="data-title">
+          <span class="section-number">14</span>
+          <h2 id="data-title">Data Strategy</h2>
+          <p>
+            A small, curated corpus beats a large, messy one — especially where
+            every sentence becomes a legal citation. The strategy was:
+          </p>
+          <ul>
+            <li><strong>Curate before you embed.</strong> Only canonical regulatory documents and the simulated policies enter the store.</li>
+            <li><strong>Keep provenance on every chunk.</strong> Source doc, document type, and (where applicable) issue date travel with the data so citations and freshness logic have something to work with.</li>
+            <li><strong>Separate the layers.</strong> Regulatory vs internal sources stay distinguishable through the whole pipeline — this is non-negotiable given pain point P4.</li>
+            <li><strong>Disclose the simulated part.</strong> Every simulated policy is labeled at ingestion and re-labeled at output.</li>
+          </ul>
+          <div class="callout callout--warn">
+            <span class="callout-label">Simulated data disclosure</span>
+            <p>
+              The four internal policy documents are simulated NBFC policies
+              created for this portfolio product. They are not views of any real
+              firm's policy. Each is labeled
+              <span class="sim-label">SIMULATED INTERNAL POLICY — CREATED FOR PORTFOLIO PRODUCT</span>
+              in the app and in documentation.
+            </p>
+          </div>
+        </section>
+
+        <!-- 15 Regulatory Sources -->
+        <section class="cs-section" id="regulatory-sources" data-section aria-labelledby="reg-title">
+          <span class="section-number">15</span>
+          <h2 id="reg-title">Regulatory Sources</h2>
+          <p>The authoritative regulatory corpus for the MVP:</p>
+          <ul class="source-list">
+            <li><span class="source-type">Reg</span><span><strong>RBI Master Direction — Know Your Customer (KYC) Directions, 2016</strong><br />The foundation document defining KYC/SLM, risk-based CCA, and customer due diligence.</span></li>
+            <li><span class="source-type">Reg</span><span><strong>KYC Amendment, November 2024</strong><br />Recent changes — e.g. updated risk-based approach and digital KYC provisions.</span></li>
+            <li><span class="source-type">Reg</span><span><strong>KYC Amendment, June 2025</strong><br />The latest layer — the most current position on amended provisions.</span></li>
+            <li><span class="source-type">Reg</span><span><strong>RBI KYC FAQs</strong><br />Reserve Bank guidance-style clarifications that operationalize the directions.</span></li>
+          </ul>
+          <p>
+            These are the real RBI documents. Having the genuine regulations —
+            not paraphrases — is what makes the product <em>authoritative</em> by
+            construction.
+          </p>
+        </section>
+
+        <!-- 16 Simulated Internal Policies -->
+        <section class="cs-section" id="internal-policies" data-section aria-labelledby="pol-title">
+          <span class="section-number">16</span>
+          <h2 id="pol-title">Simulated Internal Policies</h2>
+          <p>
+            Four simulated NBFC policies exercise the all-important
+            regulatory-vs-internal reconciliation:
+          </p>
+          <ul class="source-list">
+            <li><span class="source-type is-internal">Internal*</span><span><strong>Customer Due Diligence Policy (Simulated)</strong><br />Operationalizes CDD steps, onboarding docs and risk categories.</span></li>
+            <li><span class="source-type is-internal">Internal*</span><span><strong>Risk-Based Approach &amp; Client Risk Categorization Policy (Simulated)</strong><br />Turns RBI's RBA into the firm's risk tiers and triggers.</span></li>
+            <li><span class="source-type is-internal">Internal*</span><span><strong>KYA / Ongoing Monitoring Policy (Simulated)</strong><br />Refresh, review and transactional monitoring obligations.</span></li>
+            <li><span class="source-type is-internal">Internal*</span><span><strong>Enhanced Due Diligence / PEP Policy (Simulated)</strong><br />EDD escalations, PEP treatment and additional scrutiny.</span></li>
+          </ul>
+          <p class="small muted">
+            * <span class="sim-label">SIMULATED INTERNAL POLICY — CREATED FOR PORTFOLIO PRODUCT</span>
+          </p>
+          <p>
+            The policies are crafted to <em>clash and overlap</em> with regulation in
+            realistic ways, so the pipeline is forced to handle the genuinely
+            hard case: "policy says X, regulation says Y — which governs?"
+          </p>
+        </section>
+
+        <!-- 17 Retrieval & Generation -->
+        <section class="cs-section" id="retrieval" data-section aria-labelledby="ret-title">
+          <span class="section-number">17</span>
+          <h2 id="ret-title">Retrieval &amp; Generation Approach</h2>
+          <h3>Retrieval</h3>
+          <ul>
+            <li><strong>Source routing.</strong> The question is classified as regulatory, internal-policy, or compare-the-two, and the search set is scoped accordingly.</li>
+            <li><strong>Embedding.</strong> BAAI/bge-base-en-v1.5 encodes queries and chunks into the same space.</li>
+            <li><strong>Vector search.</strong> Chroma returns dense-similarity candidates.</li>
+            <li><strong>Evidence selection.</strong> Candidates are re-ranked and validated — bearing amendments and citation quality in mind.</li>
+          </ul>
+          <h3>Generation</h3>
+          <ul>
+            <li><strong>Grounded decoding.</strong> The Groq-hosted <em>openai/gpt-oss-120b</em> model answers from the evidence only.</li>
+            <li><strong>Citation binding.</strong> Each claim is written to reference its supporting provision; citations are validated against retrieval before surfacing.</li>
+            <li><strong>Insufficiency behavior.</strong> If evidence is thin or missing, the model is instructed to say so rather than improvise.</li>
+          </ul>
+          <p>
+            The product decision embedded here: <strong>retrieval is the product.</strong>
+            The LLM is deliberately interchangeable middleware. That is why the
+            evaluation and iteration effort concentrated on retrieval quality.
+          </p>
+        </section>
+
+        <!-- 18 Evaluation Strategy -->
+        <section class="cs-section" id="eval-strategy" data-section aria-labelledby="eval-title">
+          <span class="section-number">18</span>
+          <h2 id="eval-title">AI Evaluation Strategy</h2>
+          <p>
+            You can't iterate what you can't measure. The evaluation harness was
+            built from a golden-question dataset of <strong>approximately 50
+            questions</strong> designed to stress the real failure modes of this
+            domain:
+          </p>
+          <div class="point-grid">
+            <div class="point-card"><span class="point-index">Case</span><h4>Direct retrieval</h4><p>Simple, one-document questions — the happy path must be perfect.</p></div>
+            <div class="point-card"><span class="point-index">Case</span><h4>Multi-document</h4><p>Answers assembled across several sources at once.</p></div>
+            <div class="point-card"><span class="point-index">Case</span><h4>Internal vs regulatory</h4><p>Reconciliation questions that must pick the governing layer.</p></div>
+            <div class="point-card"><span class="point-index">Case</span><h4>Amendment / freshness</h4><p>Questions where the answer changed in Nov 2024 or Jun 2025 — the hardest, most business-critical set.</p></div>
+            <div class="point-card"><span class="point-index">Case</span><h4>Ambiguous</h4><p>Under-specified queries that demand clarification or a scoped reading.</p></div>
+            <div class="point-card"><span class="point-index">Case</span><h4>Insufficient evidence</h4><p>Queries the corpus genuinely cannot answer — the system must refuse gracefully.</p></div>
+            <div class="point-card"><span class="point-index">Case</span><h4>Adversarial</h4><p>Leading, trap, or out-of-domain questions testing whether the model stays grounded.</p></div>
+          </div>
+          <p>
+            Metrics chosen: <strong>Hit@1, Hit@3, Hit@5, Recall@5, MRR</strong> for
+            retrieval; groundedness/citation accuracy and refusal correctness for
+            generation.
+          </p>
+        </section>
+
+        <!-- 19 Baseline Evaluation -->
+        <section class="cs-section" id="baseline-eval" data-section aria-labelledby="baseline-title">
+          <span class="section-number">19</span>
+          <h2 id="baseline-title">Baseline Evaluation</h2>
+          <p>
+            A naive "embed everything, retrieve top-k, answer" baseline produced
+            solid but not trustworthy numbers:
+          </p>
+          <div class="metric-grid" aria-label="Baseline retrieval metrics">
+            <div class="metric-card is-baseline">
+              <span class="metric-label">Hit@1</span>
+              <span class="metric-value">0.718</span>
+            </div>
+            <div class="metric-card is-baseline">
+              <span class="metric-label">Hit@3</span>
+              <span class="metric-value">0.974</span>
+            </div>
+            <div class="metric-card is-baseline">
+              <span class="metric-label">Hit@5</span>
+              <span class="metric-value">1.000</span>
+            </div>
+            <div class="metric-card is-baseline">
+              <span class="metric-label">Recall@5</span>
+              <span class="metric-value">0.985</span>
+            </div>
+            <div class="metric-card is-baseline">
+              <span class="metric-label">MRR</span>
+              <span class="metric-value">0.843</span>
+            </div>
+          </div>
+          <p>
+            The headline: <em>top-5 retrieval nearly always contains the right
+            evidence, but the right evidence only ranks first in ~72% of cases.</em>
+            For a compliance answer, being buried at rank 3 is a product failure,
+            because the user isn't going to read three candidate clauses to find
+            the right one.
+          </p>
+        </section>
+
+        <!-- 20 Failure Analysis -->
+        <section class="cs-section" id="failure-analysis" data-section aria-labelledby="fail-title">
+          <span class="section-number">20</span>
+          <h2 id="fail-title">Failure Analysis</h2>
+          <p>
+            Reading the misses case-by-case revealed four systematic failure
+            themes — not random noise:
+          </p>
+          <div class="point-grid">
+            <div class="point-card"><span class="point-index">F1</span><h4>Freshness blindness</h4><p>Semantically similar provisions across the 2016 and 2025 documents confused ranking — the amendment isn't later in embedding space, it's later in time.</p></div>
+            <div class="point-card"><span class="point-index">F2</span><h4>Layer confusion</h4><p>Internal-policy chunks and regulatory chunks look alike to a dense retriever, so "what does our policy require" pulled regulatory text, and vice-versa.</p></div>
+            <div class="point-card"><span class="point-index">F3</span><h4>Shallow evidence</h4><p>"Good enough" chunks were retrieved even when a better, more specific clause existed deeper in a document.</p></div>
+            <div class="point-card"><span class="point-index">F4</span><h4>Citation mismatch</h4><p>Occasionally the right provision was retrieved but a weaker source was cited in the answer — eroding traceability.</p></div>
+          </div>
+          <div class="callout callout--note">
+            <span class="callout-label">The analytical takeaway</span>
+            <p>
+              None of these are model failures; they are <em>product</em> failures.
+              Dense similarity alone can't see recency, source type, or "authority"
+              — so those had to be engineered into the retrieval design.
+            </p>
+          </div>
+        </section>
+
+        <!-- 21 Iterations -->
+        <section class="cs-section" id="iterations" data-section aria-labelledby="iter-title">
+          <span class="section-number">21</span>
+          <h2 id="iter-title">Product Iterations</h2>
+          <p>
+            Each failure theme generated a targeted, measured change:
+          </p>
+          <ul>
+            <li><strong>Amendment / freshness-aware ranking.</strong> Retrieval now boosts later-dated documents where provisions overlap, fixing F1.</li>
+            <li><strong>Source-type routing.</strong> Questions are classified into regulatory / internal / compare buckets before retrieval, fixing F2.</li>
+            <li><strong>Better evidence selection.</strong> Post-retrieval re-ranking prefers the most specific, on-topic clause over a generic match, improving on F3.</li>
+            <li><strong>Citation precision improvements.</strong> Citation binding is validated against retrieved evidence so answers cite the provision they actually rely on, fixing F4.</li>
+            <li><strong>Retrieval-depth improvements.</strong> Wider candidate recall before selection reduces the chance the right clause never makes the shortlist.</li>
+          </ul>
+          <p>
+            Every change was A/B'd against the same golden set — no change shipped
+            without numbers attached.
+          </p>
+        </section>
+
+        <!-- 22 Post-improvement -->
+        <section class="cs-section" id="post-eval" data-section aria-labelledby="post-title">
+          <span class="section-number">22</span>
+          <h2 id="post-title">Post-improvement Evaluation</h2>
+          <p>
+            The same dataset, after iteration — retrieval quality rose on the
+            metric that matters most for compliance trust. Only Hit@1 and MRR
+            were re-measured in this pass; the other baseline rows are marked
+            "not re-measured" rather than showing unverified deltas.
+          </p>
+
+          <div class="eval-compare">
+            <div class="eval-panel">
+              <h4>Baseline</h4>
+              <div class="eval-row"><span class="k">Hit@1</span><span class="v">0.718</span></div>
+              <div class="eval-row"><span class="k">MRR</span><span class="v">0.843</span></div>
+              <div class="eval-row"><span class="k">Hit@3</span><span class="v">0.974</span></div>
+              <div class="eval-row"><span class="k">Hit@5</span><span class="v">1.000</span></div>
+              <div class="eval-row"><span class="k">Recall@5</span><span class="v">0.985</span></div>
+            </div>
+            <div class="eval-panel">
+              <h4>Post-improvement</h4>
+              <div class="eval-row"><span class="k">Hit@1</span><span class="v">0.872</span></div>
+              <div class="eval-row"><span class="k">MRR</span><span class="v">0.927</span></div>
+              <div class="eval-row"><span class="k">Hit@3</span><span class="v">not re-measured</span></div>
+              <div class="eval-row"><span class="k">Hit@5</span><span class="v">not re-measured</span></div>
+              <div class="eval-row"><span class="k">Recall@5</span><span class="v">not re-measured</span></div>
+            </div>
+          </div>
+
+          <div class="bar-area" data-bars>
+            <div class="bar-row" data-bar="0.718">
+              <div class="bar-head"><span class="name">Baseline</span><span class="val">0.718</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.872">
+              <div class="bar-head"><span class="name">Post-improvement</span><span class="val">0.872</span></div>
+              <div class="bar-track"><div class="bar-fill is-accent"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.843">
+              <div class="bar-head"><span class="name">Baseline MRR</span><span class="val">0.843</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.927">
+              <div class="bar-head"><span class="name">Post MRR</span><span class="val">0.927</span></div>
+              <div class="bar-track"><div class="bar-fill is-accent"></div></div>
+            </div>
+            <div class="bar-legend">
+              <span>Baseline</span><span class="lg-accent">Post-improvement</span>
+            </div>
+          </div>
+
+          <div class="callout callout--warn">
+            <span class="callout-label">Generation evaluation — partially completed</span>
+            <p>
+              Generation (answer-quality) evaluation was only partially completed
+              because of <strong>API quota constraints</strong> on the LLM provider.
+              Available results were directionally consistent with retrieval gains,
+              and the refusal/citation checks that did run passed — but the full
+              generation scorecard was not finished.
+            </p>
+            <p>
+              Rather than estimate or invent the missing numbers, they are
+              reported here as incomplete. This is deliberate: an AI product that
+              hides its evaluation uncertainty is the same product that will hide
+              a hallucinated citation. The harness is built; the quota is the only
+              blocker.
+            </p>
+          </div>
+        </section>
+
+        <!-- 23 Guardrails -->
+        <section class="cs-section" id="guardrails" data-section aria-labelledby="guard-title">
+          <span class="section-number">23</span>
+          <h2 id="guard-title">AI Guardrails</h2>
+          <p>
+            Guardrails are product requirements here, not bolt-on safety theater.
+            They follow directly from PR-01 through PR-08:
+          </p>
+          <div class="point-grid">
+            <div class="point-card"><span class="point-index">G1</span><h4>Evidence-grounded generation</h4><p>The model may only answer from retrieved corpus evidence — never from parametric memory.</p></div>
+            <div class="point-card"><span class="point-index">G2</span><h4>Citation validation</h4><p>Every citation is checked against the retrieved evidence before it's shown; mismatches are dropped or flagged.</p></div>
+            <div class="point-card"><span class="point-index">G3</span><h4>Explicit insufficient-evidence behavior</h4><p>No evidence → explicit "insufficient evidence" statement, not a guess.</p></div>
+            <div class="point-card"><span class="point-index">G4</span><h4>Source-type separation</h4><p>Regulatory and internal evidence are never conflated in one answer.</p></div>
+            <div class="point-card"><span class="point-index">G5</span><h4>Simulated-policy disclosure</h4><p>Simulated policies carry persistent, unmistakeable labels.</p></div>
+            <div class="point-card"><span class="point-index">G6</span><h4>Research-support disclaimer</h4><p>Outputs are research support, not a legal or compliance opinion.</p></div>
+            <div class="point-card"><span class="point-index">G7</span><h4>No autonomous compliance decisions</h4><p>The tool informs the human; it never adjudicates compliance by itself.</p></div>
+          </div>
+        </section>
+
+        <!-- 24 Risks & Mitigations -->
+        <section class="cs-section" id="risks" data-section aria-labelledby="risk-title">
+          <span class="section-number">24</span>
+          <h2 id="risk-title">Risks &amp; Mitigations</h2>
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">Risk</th><th scope="col">Mitigation</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hallucinated citations / provisions that don't exist</td>
+                <td>Citation validation against retrieved evidence (G2); grounded generation only (G1).</td>
+              </tr>
+              <tr>
+                <td>Quoting superseded (2016) wording after an amendment</td>
+                <td>Freshness-aware ranking (Iteration 1) + amendment-dated preservation of provenance.</td>
+              </tr>
+              <tr>
+                <td>Confusing internal policy with RBI regulation</td>
+                <td>Source-type routing and hard label separation (G4); explicit layer disclosure per answer.</td>
+              </tr>
+              <tr>
+                <td>Users treating output as a final compliance decision</td>
+                <td>Research-support disclaimer (G6), no autonomous decisions (G7), human-in-the-loop journey design.</td>
+              </tr>
+              <tr>
+                <td>Model/API availability or quota limits</td>
+                <td>Interchangeable LLM layer; retrieval evaluated independently; quota-gated generation eval reported honestly.</td>
+              </tr>
+              <tr>
+                <td>Corpus drift as RBI issues new amendments</td>
+                <td>Versioned corpus ingestion with dates; freshness logic reads doc recency — not just embedding similarity.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 25 Success Metrics -->
+        <section class="cs-section" id="metrics" data-section aria-labelledby="metric-title">
+          <span class="section-number">25</span>
+          <h2 id="metric-title">Success Metrics</h2>
+          <p>
+            Success is measured at two levels: does the <em>system</em> retrieve and
+            answer correctly, and does the <em>analyst</em> work faster with equal
+            confidence?
+          </p>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <span class="metric-label">Retrieval Hit@1</span>
+              <span class="metric-value">≥ 0.85</span>
+              <span class="metric-delta">target · achieved 0.872</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Retrieval MRR</span>
+              <span class="metric-value">≥ 0.90</span>
+              <span class="metric-delta">target · achieved 0.927</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Citation precision</span>
+              <span class="metric-value">≥ 0.95</span>
+              <span class="metric-delta">validated at eval</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Refusal correctness</span>
+              <span class="metric-value">100%</span>
+              <span class="metric-delta">insufficient-evidence cases</span>
+            </div>
+          </div>
+          <h3>Pilot-stage metrics (future measurement, not claimed results)</h3>
+          <ul>
+            <li>Time-to-traceable-answer reduction vs. manual baseline.</li>
+            <li>% of queries answered without supervisor escalation.</li>
+            <li>Analyst verification rate — do citations get opened and trusted?</li>
+            <li>Business repeat queries — questions re-asked because the answer wasn't reliable.</li>
+          </ul>
+          <p>
+            I deliberately list pilot metrics as what <em>would</em> be measured, not
+            as achieved numbers. A portfolio that fabricates engagement results
+            is the reason enterprise buyers trust engineers over slideware.
+          </p>
+        </section>
+
+        <!-- 26 Roadmap -->
+        <section class="cs-section" id="roadmap" data-section aria-labelledby="roadmap-title">
+          <span class="section-number">26</span>
+          <h2 id="roadmap-title">MVP Roadmap</h2>
+          <div class="roadmap">
+            <li class="is-done">
+              <div class="phase">Phase 0<small>Done</small></div>
+              <div class="phase-body"><strong>Discovery &amp; scoping</strong><span>JTBD framing, corpus curation, simulated policy set, evaluation plan.</span></div>
+            </li>
+            <li class="is-done">
+              <div class="phase">Phase 1<small>Done</small></div>
+              <div class="phase-body"><strong>MVP baseline</strong><span>Naive RAG pipeline, live demo, 50-question golden set, baseline metrics.</span></div>
+            </li>
+            <li class="is-done">
+              <div class="phase">Phase 2<small>Done</small></div>
+              <div class="phase-body"><strong>Retrieval improvements</strong><span>Freshness-aware ranking, source routing, evidence re-ranking, citation validation → Hit@1 0.872 / MRR 0.927.</span></div>
+            </li>
+            <li class="is-now">
+              <div class="phase">Phase 3<small>In progress</small></div>
+              <div class="phase-body"><strong>Generation evaluation &amp; guardrail hardening</strong><span>Complete the generation scorecard post-quota; strengthen refusals and citation edge cases.</span></div>
+            </li>
+            <li class="is-next">
+              <div class="phase">Phase 4<small>Next</small></div>
+              <div class="phase-body"><strong>Pilot &amp; expansion</strong><span>Real-user pilot, onboarding new RBI domains (e.g. KYC-related outsourcing, AML), auth and audit logging.</span></div>
+            </li>
+          </div>
+        </section>
+
+        <!-- 27 Key Decisions -->
+        <section class="cs-section" id="decisions" data-section aria-labelledby="dec-title">
+          <span class="section-number">27</span>
+          <h2 id="dec-title">Key Product Decisions</h2>
+          <div class="decision-grid">
+            <div class="decision-card">
+              <div class="dc-head">Decision · One domain first</div>
+              <div class="dc-body">
+                <p>Scope the MVP to RBI KYC/Customer Due Diligence only, rather than "all financial regulation."</p>
+                <div class="tradeoff"><strong>Why</strong>A curated, correct single-domain answer beats a broad, shallow one — and every architecture lesson generalizes afterward.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Simulated internal policies</div>
+              <div class="dc-body">
+                <p>Build four labeled stand-in policies instead of waiting on, or faking, real enterprise access.</p>
+                <div class="tradeoff"><strong>Why</strong>It lets the product exercise the internal-vs-regulatory case honestly — while disclosure keeps it credible.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Retrieval-first evaluation</div>
+              <div class="dc-body">
+                <p>Measure retrieval (Hit@k, MRR) as the primary quality gate, before judging generation.</p>
+                <div class="tradeoff"><strong>Why</strong>Garbage-in is undetectable in a fluent answer; nailing retrieval fixes most quality issues at the root.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Interchangeable LLM layer</div>
+              <div class="dc-body">
+                <p>The model is chosen at a thin integration boundary — currently Groq hosting an open-weight model.</p>
+                <div class="tradeoff"><strong>Why</strong>Keeps cost/availability/quota churn from becoming a product dependency.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Explicit "insufficient evidence"</div>
+              <div class="dc-body">
+                <p>Design refusals as a first-class, good answer — not a fallback for failures.</p>
+                <div class="tradeoff"><strong>Why</strong>For compliance, a clear "the corpus can't answer this" is a feature that builds more trust than a confident guess.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · No auth / no PII at MVP</div>
+              <div class="dc-body">
+                <p>Ship without logins and without processing personal data in the MVP demo.</p>
+                <div class="tradeoff"><strong>Why</strong>Keeps the security surface tiny while proving the core job; auth and privacy land with real users in Phase 4.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 28 Trade-offs -->
+        <section class="cs-section" id="tradeoffs" data-section aria-labelledby="to-title">
+          <span class="section-number">28</span>
+          <h2 id="to-title">Trade-offs</h2>
+          <p>Every choice gave something up. Naming them is what makes this defensible.</p>
+          <table class="risk-table">
+            <thead><tr><th scope="col">Chose</th><th scope="col">Gave up / deferred</th></tr></thead>
+            <tbody>
+              <tr><td>Deep single-domain (KYC) quality</td><td>Broad multi-domain coverage at MVP.</td></tr>
+              <tr><td>Simulated policies (honest + available)</td><td>Real enterprise document fidelity (until pilot).</td></tr>
+              <tr><td>Retrieval quality as the primary metric</td><td>Early full-generation scorecard — deferred to quota-permitting Phase 3.</td></tr>
+              <tr><td>Simple single-pipeline RAG</td><td>Multi-agent orchestration (more impressive, less trustworthy at this stage).</td></tr>
+              <tr><td>Interchangeable, cost-flexible LLM</td><td>A single "best" model; consistency of personality across runs.</td></tr>
+              <tr><td>Streamlit speed-of-ship</td><td>Production-grade UI/UX polish and enterprise SSO.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout callout--note">
+            <span class="callout-label">Underlying principle</span>
+            <p>
+              MVP trade-offs were judged against one question: <em>does this trade
+              make the core JTBD more provable or less?</em> If it didn't help the
+              analyst's job, it wasn't worth the cost.
+            </p>
+          </div>
+        </section>
+
+        <!-- 29 Lessons -->
+        <section class="cs-section" id="lessons" data-section aria-labelledby="lessons-title">
+          <span class="section-number">29</span>
+          <h2 id="lessons-title">What I Learned</h2>
+          <ul>
+            <li><strong>Embeddings don't know time.</strong> A 2025 regulation is not "closer" to a question than its 2016 ancestor in vector space. Recency had to be a first-class retrieval feature — the single biggest lesson from F1.</li>
+            <li><strong>The LLM is the easiest part.</strong> Grounding, retrieval and evaluation dominate the engineering — and the product — effort. That inverts the naive "model-first" instinct.</li>
+            <li><strong>Traceability is the feature.</strong> For compliance users, the citation is the answer. Language is just the carrier.</li>
+            <li><strong>Refusals are product surface.</strong> "We don't know" is a designed moment, not an error state, and it earned the most user trust of any behavior.</li>
+            <li><strong>Report the incomplete, or it will be assumed dishonest.</strong> The quota-limited generation evaluation got the same transparent treatment as every shipped number — that discipline is the product.</li>
+            <li><strong>Evaluation datasets must encode business risk,</strong> not just "difficulty." Amendment and adversarial cases earn their place because they represent real-world failure costs.</li>
+          </ul>
+        </section>
+
+        <!-- 30 Future Opportunities -->
+        <section class="cs-section" id="future" data-section aria-labelledby="future-title">
+          <span class="section-number">30</span>
+          <h2 id="future-title">Future Opportunities</h2>
+          <ul>
+            <li><strong>New regulatory domains</strong> — extend the same pipeline to AML/KYC outsourcing, payment regulation, or lending rules; the routing and freshness machinery ports directly.</li>
+            <li><strong>Amendment watch</strong> — monitor RBI publications and flag which internal policies are affected when a new amendment drops.</li>
+            <li><strong>Policy-impact mapping</strong> — given a regulation change, surface every internal policy that needs review.</li>
+            <li><strong>Audit trail &amp; workflow</strong> — record queries, citations and answers for the firm's compliance audit file (auth + logging land here).</li>
+            <li><strong>Benchmark the copilot vs. a senior analyst</strong> — on real (consented) queries, measuring time and confidence, rather than demo anecdotes.</li>
+          </ul>
+        </section>
+
+        <!-- END CTA -->
+        <section class="cs-end" aria-labelledby="end-title">
+          <h2 id="end-title">The point of this build</h2>
+          <p>
+            A working, evaluated AI product — with honest numbers, real
+            architecture and product decisions on the table. That's the kind of
+            evidence I want to bring to an AI Product role.
+          </p>
+          <div class="btn-row" style="justify-content: center">
+            <!-- PLACEHOLDER: replace href with the deployed Streamlit app URL -->
+            <a class="btn btn--accent" href="https://regulatory-intelligence-copilot-ezc6ahmhhs6vjjnjoy7iz9.streamlit.app/" rel="noopener noreferrer" target="_blank">Try Live Product</a>
+            <!-- PLACEHOLDER: replace href with the public GitHub repo URL -->
+            <a class="btn btn--ghost" href="https://github.com/abhee05/regulatory-intelligence-copilot" rel="noopener noreferrer" target="_blank">View GitHub</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span data-year>2026</span> Abhishek Sachdeva · AI Product Portfolio</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#products">AI Products</a>
+        <a href="case-study-regulatory-copilot.html" aria-current="page">Case Study</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
