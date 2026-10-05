@@ -57,23 +57,24 @@ Two shipped products, each with a full case study in this repository:
 Both are independent portfolio products — not employer or client work. Neither
 claims users, revenue or adoption numbers that do not exist.
 
-## Outstanding manual steps
+## Contact channels
 
-Both items are visible in the HTML and must be resolved by the owner.
+All public contact channels are real and committed. There are no placeholder
+tokens in the shipped HTML.
 
-| Item | Where | Action |
-| --- | --- | --- |
-| `ABHISHEK_HANDLE` (LinkedIn) | `index.html` hero + contact | Replace with the real public LinkedIn handle (2 links) |
-| Resume PDF | `assets/Abhishek_Sachdeva_Product_Manager_Resume.pdf` | Copy the PDF in and commit it |
+| Channel | Where |
+| --- | --- |
+| Email | `mailto:abhisheksachdeva05@gmail.com` (hero + contact) |
+| GitHub | `https://github.com/abhee05` (hero + contact) |
+| Resume | `assets/Abhishek_Sachdeva_Product_Manager_Resume.pdf` (nav, hero, contact — all open in a new tab) |
 
-The View Resume CTA degrades gracefully: `js/main.js` probes the PDF with a
-`HEAD` request and hides every resume link if the file 404s, so the site never
-ships a dead link while the asset is pending. Once the file is committed the
-button appears automatically — no code change needed.
+LinkedIn is intentionally **not** published yet: no button, no link and no
+placeholder token. When the profile is ready, add it to the hero link row and
+the contact list. Do not ship a stub URL or a disabled button in the meantime.
 
-Everything else is resolved: the Vercel canonical domain
-(`abhishek-ai-product-portfolio.vercel.app`), both GitHub repos, both live
-product URLs and the contact email are real and committed.
+The resume CTA is defensive by design: `js/main.js` probes the PDF with a `HEAD`
+request and hides every resume link if it 404s, so a missing or renamed asset can
+never become a dead link in production.
 
 ## How to extend
 

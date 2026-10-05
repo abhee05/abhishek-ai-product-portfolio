@@ -151,13 +151,16 @@ quantitative results. "What I'd explore next" items are hypotheses only.
 for product UI. Regenerate `assets/og-image.png` from
 `06-final-foodmood-1440.webp` if that capture changes.
 
-## Section: URL / account placeholders
+## Section: Public contact channels
 
-`README.md` (site section) contains the authoritative list. These values must
-be supplied by Abhishek before deployment:
+All published channels are real and committed; `README.md` holds the
+authoritative list.
 
-- Live product URL (streamlit app)
-- GitHub repo URL
-- LinkedIn profile handle
-- GitHub profile handle
-- Contact email
+- Live product URLs: both Vercel / Streamlit deployments are live.
+- GitHub: `https://github.com/abhee05` plus both product repositories.
+- Contact email: `abhisheksachdeva05@gmail.com`.
+- Resume: `assets/Abhishek_Sachdeva_Product_Manager_Resume.pdf`.
+
+LinkedIn is deliberately unpublished. The profile is not public yet, so the
+site ships no LinkedIn button, link or placeholder token. Add it only when a
+real URL exists — never a stub or a disabled control.

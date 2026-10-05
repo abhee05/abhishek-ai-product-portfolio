@@ -1460,6 +1460,8 @@ hr {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  min-height: 32px;
+  padding: 0 0.15rem;
   font-size: var(--step--1);
   font-weight: 580;
   color: var(--ink-soft);
@@ -1557,7 +1559,8 @@ hr {
 
 .cs-toc a {
   display: block;
-  padding: 0.32rem 0 0.32rem 0.9rem;
+  min-height: 32px;
+  padding: 0.45rem 0 0.45rem 0.9rem;
   color: var(--ink-mute);
   border-left: 2px solid transparent;
   margin-left: -1px;

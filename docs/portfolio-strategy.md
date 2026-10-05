@@ -79,7 +79,17 @@ Soon" slot to swap out. A new project means all of these, in order:
   skill-percentage bars, no emoji in content.
 - All interactive behavior stays in `js/main.js`.
 
-## URL placeholders still to be supplied
+## No placeholder tokens
 
-See `README.md` (site section) and `content-source-of-truth.md`. Search the
-repository for `PLACEHOLDER` and `ABHISHEK_` / `YOUR_` tokens before deploying.
+The public site ships zero placeholder tokens. Before any deploy, confirm it
+stays that way:
+
+```sh
+grep -rniE "PLACEHOLDER|ABHISHEK_|YOUR_|REPLACE_WITH|Coming Soon|Project 0[3-9]" \
+  --include="*.html" --include="*.css" --include="*.js" .
+```
+
+Every published channel is real: the Vercel domain, both live product URLs, both
+GitHub repositories, the GitHub profile and the contact email. LinkedIn is
+intentionally unpublished — add it only when a real URL exists, never as a stub
+or a disabled control.
