@@ -20,10 +20,12 @@ Or use `npx serve .`
 
 ```
 index.html                          Home: hero, about, experience, products, capabilities, contact
-case-study-regulatory-copilot.html  Flagship product case study (30 sections)
+case-study-regulatory-copilot.html  Flagship project 01 case study (30 sections)
+case-study-foodmood.html            Flagship project 02 case study (15 sections)
 css/styles.css                      Design system + all components (tokens at top)
 js/main.js                          Vanilla JS: nav, reveal-on-scroll, TOC, metric bars
 assets/favicon.svg                  Placeholder favicon
+assets/foodmood/README.md           Where to drop real FoodMood screenshots
 docs/                               Internal maintenance docs (not on the public site)
   portfolio-strategy.md
   content-source-of-truth.md
@@ -33,12 +35,21 @@ vercel.json                         Static deployment settings
 README.md
 ```
 
-## Case study
+## Case studies
 
-The featured product — **Regulatory Intelligence Copilot** — is a grounded,
-traceable AI research copilot for RBI KYC compliance teams at Indian NBFCs,
-with real retrieval evaluation numbers and transparent reporting of its
-partially-completed generation evaluation.
+Two flagship products, each with a full case study in this repository:
+
+1. **Regulatory Intelligence Copilot** (project 01) — a grounded, traceable AI
+   research copilot for RBI KYC compliance teams, with real retrieval evaluation
+   numbers and transparent reporting of its partially-completed generation
+   evaluation.
+2. **FoodMood** (project 02) — a real-time, two-person food decision product.
+   Private preference capture, three-level reactions, derived Perfect /
+   Possible / Backup matches and mutual confirmation, deployed on Vercel with a
+   Supabase backend.
+
+Both are independent portfolio products — not employer or client work. Neither
+claims users, revenue or adoption numbers that do not exist.
 
 ## Placeholders to replace before deploy
 
@@ -61,6 +72,9 @@ tags.
 
 - New project: follow `docs/future-project-template.md`, add a case-study
   `.html`, and swap a "Coming Soon" card on `index.html`.
+- Product screenshots: capture from the live product and save into
+  `assets/<project>/`, then replace the `.shot-frame` placeholders in the case
+  study with `<img>` elements. See `assets/foodmood/README.md`.
 - Style changes: edit the design tokens at the top of `css/styles.css`.
 
 ## Deploy to Vercel
@@ -80,8 +94,11 @@ preset: **Other**. Build command: none. Output: root).
 ## Notes on content rules
 
 - No PM title is claimed where none was held; job titles are the real ones.
-- The copilot is an independent portfolio product, not a Deloitte/client
-  product.
+- Both the copilot and FoodMood are independent portfolio products, not
+  Deloitte/client products.
 - Simulated internal policies are always labeled as such.
-- All numbers on the site come from the product's own evaluation harness;
-  targets are marked as targets.
+- All numbers on the copilot site come from the product's own evaluation
+  harness; targets are marked as targets.
+- FoodMood claims no usage, adoption or satisfaction metrics. Its validation
+  section lists tested flows, not results, and future ideas are labeled as
+  hypotheses.

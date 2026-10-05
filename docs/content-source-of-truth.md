@@ -99,6 +99,43 @@ ranking, insufficient-evidence behavior, evaluation harness.
 decisions, approval workflows, authentication, PII processing, user-uploaded
 documents, multi-agent architecture.
 
+## Section: Flagship product 02 identity — FoodMood
+
+- **Name:** FoodMood
+- **Type:** Real-time two-person social decision product (portfolio-owned)
+- **Live product:** https://food-mood-ashy.vercel.app/
+- **GitHub:** https://github.com/abhee05/Food
+- **Primary users:** exactly two participants per private session
+- **Core hypothesis:**
+  > If two people rate the same food options privately, and the product shows
+  > only their overlap, the decision collapses from a negotiation into a
+  > shortlist both can accept.
+- **Principles:** Private · Mutual · Confirmed · No forcing
+- **Journey:** Home → Create Session → Invite/Join → Two-Person Lobby →
+  Rating → Waiting → Match Reveal → Proposal → Accept/Reject →
+  Final FoodMood → Another Round
+- **Reactions:** craving it / maybe / not today
+- **Match rules:** craving+craving = Perfect; craving+maybe (either order) =
+  Possible; maybe+maybe = Backup; any "not today" = No Match. Ordered
+  Perfect → Possible → Backup. Individual reactions are never revealed.
+- **Derivation principle:** matches are derived from reactions, never stored as
+  redundant match records.
+- **Entities:** food_option, session, participant, round, reaction
+- **Stack:** React, TypeScript, Vite (front); Supabase, PostgreSQL, anonymous
+  auth, RLS, secure RPC functions (back); GitHub + Vercel (deploy)
+- **Tools:** Google Stitch (UX/wireframing), AI-assisted workflow,
+  Cursor/OpenCode (implementation and troubleshooting). AI tools are
+  accelerators only — never credited with the product decisions.
+
+**Claims discipline:** FoodMood has no user base. Never state usage, adoption,
+revenue, satisfaction or match-rate numbers. The validation section lists the
+flows that were functionally tested in real two-browser sessions — no
+quantitative results. "What I'd explore next" items are hypotheses only.
+
+**Screenshots:** none exist locally. The case study renders labelled
+`.shot-frame` placeholders. Drop real captures into `assets/foodmood/` per
+`assets/foodmood/README.md`. Never substitute stock imagery for product UI.
+
 ## Section: URL / account placeholders
 
 `README.md` (site section) contains the authoritative list. These values must

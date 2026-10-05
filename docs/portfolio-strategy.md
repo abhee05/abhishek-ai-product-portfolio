@@ -20,23 +20,32 @@ Everything on the public site either supports those four goals or gets cut.
 1. **Do not claim a Product Manager title** where none was held. Job titles on
    the Experience section are the real, contractual titles.
 2. **Do not present independent portfolio products as Deloitte/client
-   products.** The Regulatory Intelligence Copilot is an independent,
-   portfolio-owned product. Its case study says so explicitly.
+   products.** Both the Regulatory Intelligence Copilot and FoodMood are
+   independent, portfolio-owned products. Their case studies say so
+   explicitly.
 3. **No invented employers, achievements, metrics, customers or production
    deployments.** Every number on the site is traceable back to the evaluation
-   harness or is presented as a target, never as a claimed result.
-4. Simulated internal policies **must always** carry the label:
+   harness or is presented as a target, never as a claimed result. FoodMood has
+   no user base, so it must never carry usage, adoption, revenue or
+   satisfaction figures — only the list of flows that were functionally
+   tested.
+4. **Future ideas are labeled as hypotheses**, never as shipped functionality.
+5. Simulated internal policies **must always** carry the label:
    `SIMULATED INTERNAL POLICY — CREATED FOR PORTFOLIO PRODUCT`.
+6. **AI tools are accelerators, not authors.** Credit tooling for
+   implementation and troubleshooting; product decisions and framing stay with
+   Abhishek.
 
 ## Site structure
 
 | Route | Purpose |
 | --- | --- |
 | `index.html` | Home: hero, about, experience overview, featured products, capabilities, contact |
-| `case-study-regulatory-copilot.html` | Flagship product case study (full 30 sections) |
+| `case-study-regulatory-copilot.html` | Flagship project 01 case study (full 30 sections) |
+| `case-study-foodmood.html` | Flagship project 02 case study (15 sections) |
 | `css/styles.css` | Single stylesheet, design tokens at top |
 | `js/main.js` | Vanilla JS: nav, reveal-on-scroll, TOC, animated metric bars |
-| `assets/` | favicon.svg, og-image (when added) |
+| `assets/` | favicon.svg, og-image (when added), per-project screenshot folders |
 | `docs/` | Internal maintenance docs (not linked from the site) |
 
 ## Adding a new project
