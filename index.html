@@ -60,26 +60,28 @@
 
       <ul class="nav-links" id="primary-nav" data-nav-menu>
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="index.html#experience">Experience</a></li>
         <li><a href="index.html#products">AI Products</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main">
+<main id="main">
 
     <!-- ======================= HERO ======================= -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="shell hero-inner">
-        <span class="hero-badge">Product Owner · AI &amp; GenAI Products · Agile Delivery</span>
         <h1 id="hero-heading">
           <span class="hero-name">Abhishek Sachdeva</span>
           <span class="hero-role">Product Owner <span class="sep">/</span> AI &amp; GenAI Products <span class="sep">/</span> Agile Delivery</span>
         </h1>
         <p class="hero-statement">
-          Product Owner professional with 6+ years of relevant experience across product delivery, stakeholder management and data-driven initiatives in financial services, pension operations, workforce planning and AI/GenAI solutions. Experienced in translating business needs into MVP scope, prioritized backlogs, epics, user stories and acceptance criteria, while partnering with business and engineering teams through delivery, UAT and continuous improvement.
+          Product Owner with 6+ years across financial services, pension operations
+          and workforce planning. I turn business needs into MVP scope, prioritized
+          backlogs and testable acceptance criteria — and I build and evaluate the
+          AI products myself.
         </p>
 
         <div class="btn-row">
@@ -93,54 +95,111 @@
         <dl class="hero-meta">
           <div>
             <dt>Current</dt>
-            <dd>Consultant (Product Owner / Product Manager) @ Deloitte Shared Services India</dd>
+            <dd>Consultant (Product Owner / PM), Deloitte Shared Services India</dd>
           </div>
           <div>
             <dt>Domain</dt>
-            <dd>Financial Services · Pension Operations · Workforce Planning</dd>
+            <dd>Financial services · Pension ops · Workforce planning</dd>
           </div>
           <div>
             <dt>Focus</dt>
-            <dd>AI &amp; GenAI · Product Delivery</dd>
+            <dd>AI &amp; GenAI product delivery</dd>
           </div>
         </dl>
       </div>
     </section>
 
-    <!-- ======================= ABOUT ======================= -->
-    <section class="section" id="about" data-section aria-labelledby="about-heading">
+    <!-- ======================= AI PRODUCTS ======================= -->
+    <section class="section" id="products" data-section aria-labelledby="products-heading">
       <div class="shell">
         <div class="section-head">
-          <span class="eyebrow">About</span>
-          <h2 id="about-heading">A builder who thinks like a product manager</h2>
+          <span class="eyebrow">AI Products</span>
+          <h2 id="products-heading">Two products built and shipped</h2>
+          <p class="lede">
+            Both are live MVPs with full case studies covering the product
+            decisions, scope trade-offs and validation. Both are independent
+            portfolio projects — neither is Deloitte, Wipro, HCL or client work.
+          </p>
         </div>
-        <div class="grid grid--2">
-          <div class="card" data-reveal>
-            <h3>Product + AI, in one seat</h3>
-            <p>
-              I bring product discipline to AI work: define the user, their job
-              to be done, and the evidence that proves a solution works — then
-              actually build and evaluate it.
+
+        <div class="project-grid">
+          <!-- Project 01 -->
+          <article class="project" data-reveal aria-labelledby="project-copilot-title">
+            <div class="project-head">
+              <span class="project-num">Project 01</span>
+              <span class="project-status">MVP shipped</span>
+            </div>
+            <p class="project-category">Enterprise AI · Regulatory research</p>
+            <h3 id="project-copilot-title">Regulatory Intelligence Copilot</h3>
+            <p class="project-lede">
+              AI-assisted regulatory research for Indian financial services, giving
+              compliance teams grounded answers with citations instead of a chat
+              window they cannot defend.
             </p>
-            <p>
-              That combination is rare in GenAI right now. Many prototypes stop
-              at a demo. My approach runs the full loop: discovery, scoping,
-              design, evaluation, iteration and launch.
+            <ul class="tag-row" aria-label="Capabilities">
+              <li class="tag">Grounded with citations</li>
+              <li class="tag">Regulatory vs policy</li>
+              <li class="tag">AI evaluation</li>
+            </ul>
+            <dl class="project-facts">
+              <div>
+                <dt>Primary user</dt>
+                <dd>Compliance analyst / compliance manager</dd>
+              </div>
+              <div>
+                <dt>Policy domain</dt>
+                <dd>RBI KYC / customer due diligence</dd>
+              </div>
+              <div>
+                <dt>Approach</dt>
+                <dd>Grounded RAG, compared against simulated internal policies</dd>
+              </div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn btn--light btn--sm" href="https://immediate-ellipse-c2a.notion.site/Regulatory-Intelligence-Copilot-3ed1c3ae32a28078bdaded1909c441e2" rel="noopener noreferrer" target="_blank">View Case Study</a>
+              <a class="btn btn--ghost btn--sm" href="https://regulatory-intelligence-copilot-ezc6ahmhhs6vjjnjoy7iz9.streamlit.app/" rel="noopener noreferrer" target="_blank">Live Product</a>
+              <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/regulatory-intelligence-copilot" rel="noopener noreferrer" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project" data-reveal aria-labelledby="project-foodmood-title">
+            <div class="project-head">
+              <span class="project-num">Project 02</span>
+              <span class="project-status">MVP shipped</span>
+            </div>
+            <p class="project-category">Consumer social · Two-person decision</p>
+            <h3 id="project-foodmood-title">FoodMood</h3>
+            <p class="project-lede">
+              A privacy-first product that turns &ldquo;what should we eat?&rdquo;
+              into a two-person matching session — private preferences in, mutual
+              matches out, one confirmed FoodMood.
             </p>
-          </div>
-          <div class="card" data-reveal>
-            <h3>Enterprise-first mindset</h3>
-            <p>
-              Enterprise AI fails for reasons that have nothing to do with model
-              quality — trust, traceability, guardrails and adoption. I design
-              for those constraints from the first requirement, not as an
-              afterthought.
-            </p>
-            <p>
-              I write about products, pipelines and evaluation in plain
-              language, because AI products are bought and sold on clarity.
-            </p>
-          </div>
+            <ul class="tag-row" aria-label="Capabilities">
+              <li class="tag">Product strategy</li>
+              <li class="tag">UX</li>
+              <li class="tag">Real-time collaboration</li>
+            </ul>
+            <dl class="project-facts">
+              <div>
+                <dt>Participants</dt>
+                <dd>Exactly two per private session</dd>
+              </div>
+              <div>
+                <dt>Core mechanic</dt>
+                <dd>Private ratings → Perfect / Possible / Backup → mutual confirmation</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>React · TypeScript · Vite · Supabase · Vercel</dd>
+              </div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn btn--light btn--sm" href="case-study-foodmood.html">View Case Study</a>
+              <a class="btn btn--ghost btn--sm" href="https://food-mood-ashy.vercel.app/" rel="noopener noreferrer" target="_blank">Live Product</a>
+              <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/FoodMood" rel="noopener noreferrer" target="_blank">GitHub</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -150,246 +209,128 @@
       <div class="shell">
         <div class="section-head">
           <span class="eyebrow">Experience</span>
-          <h2 id="experience-heading">Career in enterprise delivery</h2>
+          <h2 id="experience-heading">Enterprise delivery with a product lens</h2>
           <p class="lede">
-            A consulting and services background spanning AI/ML, analytics and
-            large enterprise engagements — with a product lens applied
-            throughout.
+            Consulting and services background spanning AI/ML, analytics and large
+            engagements — owning scope, backlog and acceptance throughout.
           </p>
         </div>
 
         <ol class="timeline">
           <li class="is-current" data-reveal>
-             <p class="exp-role">Consultant (Product Owner / Product Manager)</p>
-             <p class="exp-org">Deloitte Shared Services India</p>
-             <p class="exp-meta">
-               <span>Oct 2025 – Present</span>
-             </p>
-             <ul class="exp-desc" style="list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem;">
-               <li>Work with business stakeholders to understand user problems, expected outcomes and business rules and define product scope and MVP priorities.</li>
-               <li>Create and refine product backlogs, translating requirements into epics, features, user stories and testable acceptance criteria.</li>
-               <li>Prioritize requirements based on business value, urgency and dependencies and communicate delivery trade-offs.</li>
-               <li>Support sprint planning and execution with engineering and design teams, clarify requirements and coordinate blockers and dependencies.</li>
-               <li>Coordinate functional validation, UAT, release readiness and post-release improvement</li>
-             </ul>
+            <p class="exp-role">Consultant (Product Owner / Product Manager)</p>
+            <p class="exp-org">Deloitte Shared Services India</p>
+            <p class="exp-meta"><span>Oct 2025 – Present</span></p>
+            <ul class="exp-desc">
+              <li>Work with business stakeholders to define user problems, expected outcomes and business rules, then set product scope and MVP priorities.</li>
+              <li>Create and refine backlogs, translating requirements into epics, features, user stories and testable acceptance criteria.</li>
+              <li>Prioritize by business value, urgency and dependencies, and communicate delivery trade-offs.</li>
+              <li>Support sprint planning with engineering and design, clarifying requirements and coordinating blockers and dependencies.</li>
+              <li>Coordinate functional validation, UAT, release readiness and post-release improvement.</li>
+            </ul>
           </li>
 
           <li data-reveal>
-             <p class="exp-role">Business Analyst</p>
-             <p class="exp-org">Wipro HR Services Pvt Ltd</p>
-             <p class="exp-meta">
-               <span>Jul 2019 – Apr 2022</span>
-             </p>
-             <ul class="exp-desc" style="list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem;">
-               <li>Partnered with operations and onshore stakeholders to define business problems, rules and expected outcomes for forecasting and pension initiatives.</li>
-               <li>Translated requirements into product scope, epics, features, user stories and acceptance criteria.</li>
-               <li>Created and refined backlogs supporting incremental delivery.</li>
-               <li>Coordinated stakeholder reviews, requirement clarification and UAT.</li>
-               <li>Worked with business and technical teams to investigate unexpected results and incorporate improvements.</li>
-             </ul>
+            <p class="exp-role">Business Analyst</p>
+            <p class="exp-org">Wipro HR Services Pvt Ltd</p>
+            <p class="exp-meta"><span>Jul 2019 – Apr 2022</span></p>
+            <ul class="exp-desc">
+              <li>Partnered with operations and onshore stakeholders to define business problems, rules and expected outcomes for forecasting and pension initiatives.</li>
+              <li>Translated requirements into product scope, epics, features, user stories and acceptance criteria, and created and refined backlogs for incremental delivery.</li>
+              <li>Coordinated stakeholder reviews, requirement clarification and UAT.</li>
+              <li>Worked with business and technical teams to investigate unexpected results and incorporate improvements.</li>
+            </ul>
           </li>
 
           <li data-reveal>
-             <p class="exp-role">Specialist</p>
-             <p class="exp-org">HCL Technologies</p>
-             <p class="exp-meta">
-               <span>Feb 2015 – May 2019</span>
-             </p>
-             <div class="exp-desc">
-               <div style="margin-bottom: 1rem;">
-                 <p class="exp-role" style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">Business Analysis Responsibilities</p>
-                 <p class="exp-meta" style="margin-bottom: 0.5rem;"><span>Feb 2017 – May 2019</span></p>
-                 <ul style="list-style-type: disc; padding-left: 1.5rem;">
-                   <li>Gathered HR and internal reporting requirements and analyzed processes and business data.</li>
-                   <li>Used SQL to analyze HR and financial records.</li>
-                   <li>Built Power BI KPI dashboards and presented recommendations to stakeholders.</li>
-                   <li>Work contributed to a 40% reduction in manual reporting effort.</li>
-                 </ul>
-               </div>
-               <div>
-                 <p class="exp-role" style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">Network Engineer</p>
-                 <p class="exp-meta" style="margin-bottom: 0.5rem;"><span>Feb 2015 – Jan 2017</span></p>
-                 <ul style="list-style-type: disc; padding-left: 1.5rem;">
-                   <li>Supported Cisco network infrastructure, investigated incidents and documented technical changes and resolutions.</li>
-                 </ul>
-               </div>
-             </div>
+            <p class="exp-role">Specialist</p>
+            <p class="exp-org">HCL Technologies</p>
+            <p class="exp-meta"><span>Feb 2015 – May 2019</span></p>
+            <div class="exp-roles">
+              <div class="exp-role-block">
+                <p class="exp-role-sub">Business Analysis</p>
+                <p class="exp-meta"><span>Feb 2017 – May 2019</span></p>
+                <ul class="exp-desc">
+                  <li>Gathered HR and internal reporting requirements and analyzed processes and business data.</li>
+                  <li>Used SQL to analyze HR and financial records.</li>
+                  <li>Built Power BI KPI dashboards and presented recommendations to stakeholders.</li>
+                  <li>Work contributed to a 40% reduction in manual reporting effort.</li>
+                </ul>
+              </div>
+              <div class="exp-role-block">
+                <p class="exp-role-sub">Network Engineer</p>
+                <p class="exp-meta"><span>Feb 2015 – Jan 2017</span></p>
+                <ul class="exp-desc">
+                  <li>Supported Cisco network infrastructure, investigated incidents and documented technical changes and resolutions.</li>
+                </ul>
+              </div>
+            </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ======================= FEATURED AI PRODUCTS ======================= -->
-    <section class="section" id="products" data-section aria-labelledby="products-heading">
+    <!-- ======================= CAPABILITIES ======================= -->
+    <section class="section" id="capabilities" data-section aria-labelledby="capabilities-heading">
       <div class="shell">
         <div class="section-head">
-          <span class="eyebrow">Featured AI Products</span>
-          <h2 id="products-heading">Products I built and shipped</h2>
-          <p class="lede">
-            Two flagship products — a grounded AI research copilot and a
-            real-time two-person decision product. Both are working MVPs, and
-            both have full case studies covering the product decisions, scope
-            trade-offs and validation.
-          </p>
-        </div>
-
-        <!-- FLAGSHIP: Regulatory Intelligence Copilot -->
-        <article class="flagship" data-reveal aria-labelledby="flagship-title">
-          <div>
-            <span class="card-tag card-tag--accent">Flagship · Project 01 · MVP Shipped</span>
-            <h3 id="flagship-title">Regulatory Intelligence Copilot</h3>
-            <p>
-              AI-assisted regulatory research product for Indian financial services. 
-              Grounded RAG answers with citations, enabling comparison of regulatory 
-              provisions against simulated internal policies.
-            </p>
-
-            <div class="principle-row" aria-label="Core product principles">
-              <span class="principle">Grounded with Citations</span>
-              <span class="principle">Regulatory vs Policy</span>
-              <span class="principle">AI Evaluation</span>
-              <span class="principle">Live MVP</span>
-            </div>
-
-            <div class="btn-row">
-              <a class="btn btn--light" href="https://immediate-ellipse-c2a.notion.site/Regulatory-Intelligence-Copilot-3ed1c3ae32a28078bdaded1909c441e2" rel="noopener noreferrer" target="_blank">View Case Study</a>
-              <a class="btn btn--ghost" href="https://regulatory-intelligence-copilot-ezc6ahmhhs6vjjnjoy7iz9.streamlit.app/" rel="noopener noreferrer" target="_blank">Try Live Product</a>
-              <a class="btn btn--ghost" href="https://github.com/abhee05/regulatory-intelligence-copilot" rel="noopener noreferrer" target="_blank">View GitHub</a>
-            </div>
-          </div>
-
-          <dl class="flagship-stats">
-            <div class="flagship-stat">
-              <dt>Policy domain</dt>
-              <dd>RBI KYC / Customer Due Diligence</dd>
-            </div>
-            <div class="flagship-stat">
-              <dt>Primary user</dt>
-              <dd>Compliance Analyst / Compliance Manager</dd>
-            </div>
-            <div class="flagship-stat">
-              <dt>Approach</dt>
-              <dd>Grounded RAG with citations</dd>
-            </div>
-            <div class="flagship-stat">
-              <dt>Key features</dt>
-              <dd>Regulatory vs simulated internal-policy comparison, AI evaluation &amp; iteration</dd>
-            </div>
-          </dl>
-        </article>
-
-        <!-- FLAGSHIP: FoodMood -->
-        <article class="flagship" data-reveal aria-labelledby="foodmood-title">
-          <div>
-            <span class="card-tag card-tag--accent">Flagship · Project 02 · MVP Shipped</span>
-            <h3 id="foodmood-title">FoodMood</h3>
-            <p class="flagship-kicker">Two-Person Social Decision Product</p>
-            <p>
-              A privacy-first decision product that turns &ldquo;What should we
-              eat?&rdquo; into a two-person matching experience — from private
-              preferences to mutual matches and a confirmed FoodMood.
-            </p>
-
-            <div class="principle-row" aria-label="Product tags">
-              <span class="principle">Product Strategy</span>
-              <span class="principle">MVP</span>
-              <span class="principle">UX</span>
-              <span class="principle">Real-Time Collaboration</span>
-              <span class="principle">Supabase</span>
-              <span class="principle">React</span>
-            </div>
-
-            <div class="btn-row">
-              <a class="btn btn--light" href="case-study-foodmood.html">View Case Study</a>
-              <a class="btn btn--ghost" href="https://food-mood-ashy.vercel.app/" rel="noopener noreferrer" target="_blank">Live Product</a>
-              <a class="btn btn--ghost" href="https://github.com/abhee05/FoodMood" rel="noopener noreferrer" target="_blank">GitHub</a>
-            </div>
-          </div>
-
-          <dl class="flagship-stats">
-            <div class="flagship-stat">
-              <dt>Product type</dt>
-              <dd>Two-person social decision product</dd>
-            </div>
-            <div class="flagship-stat">
-              <dt>Primary users</dt>
-              <dd>Exactly two participants per private session</dd>
-            </div>
-            <div class="flagship-stat">
-              <dt>Core mechanic</dt>
-              <dd>Private ratings → Perfect / Possible / Backup matches → mutual confirmation</dd>
-            </div>
-            <div class="flagship-stat">
-              <dt>Stack</dt>
-              <dd>React · TypeScript · Vite · Supabase · Vercel</dd>
-            </div>
-          </dl>
-        </article>
-
-        <!-- COMING SOON -->
-        <h3 class="section-sub" style="margin-top: 3.5rem">Up next</h3>
-        <div class="grid grid--2" style="margin-top: 1.5rem">
-
-          <article class="card soon-card" data-reveal aria-labelledby="soon-3">
-            <span class="soon-index">PROJECT 03</span>
-            <span class="card-tag card-tag--soon">Coming Soon</span>
-            <h3 id="soon-3">AI Product Case Study #3</h3>
-            <p class="muted">
-              Next project in the portfolio. Slot reserved here so the
-              portfolio can grow without reworking the homepage layout.
-            </p>
-          </article>
-
-          <article class="card soon-card" data-reveal aria-labelledby="soon-4">
-            <span class="soon-index">PROJECT 04</span>
-            <span class="card-tag card-tag--soon">Coming Soon</span>
-            <h3 id="soon-4">AI Product Case Study #4</h3>
-            <p class="muted">
-              Slotted for a second domain area. Uses the same case-study
-              template so every project stays consistent and easy to compare.
-            </p>
-          </article>
-
-        </div>
-
-        <p class="small muted" style="margin-top: 1.5rem">
-          Template for new projects lives in <code>docs/future-project-template.md</code>.
-        </p>
-      </div>
-    </section>
-
-    <!-- ======================= SKILLS / CAPABILITIES ======================= -->
-    <section class="section section--alt" id="capabilities" data-section aria-labelledby="capabilities-heading">
-      <div class="shell">
-        <div class="section-head section-head--center">
-          <span class="eyebrow">Skills / Capabilities</span>
+          <span class="eyebrow">Capabilities</span>
           <h2 id="capabilities-heading">What I bring to an AI product team</h2>
         </div>
 
-        <div class="grid grid--3">
-          <div class="cap-item" data-reveal>
-            <h4>Product Ownership</h4>
-            <p>MVP Scoping, Backlog Creation &amp; Refinement, User Stories, Acceptance Criteria, Prioritization, Sprint Planning Support, Dependency Management, Scope Trade-offs</p>
+        <ul class="skill-groups">
+          <li class="skill-group" data-reveal>
+            <h3>Product ownership</h3>
+            <p>MVP scoping · backlog creation &amp; refinement · user stories · acceptance criteria · prioritization · sprint planning support · dependency management · scope trade-offs</p>
+          </li>
+          <li class="skill-group" data-reveal>
+            <h3>Delivery &amp; analysis</h3>
+            <p>Agile/Scrum · stakeholder management · requirements elicitation · process analysis · business rules · UAT · defect triage · Jira</p>
+          </li>
+          <li class="skill-group" data-reveal>
+            <h3>AI product</h3>
+            <p>LLMs · RAG · AI evaluation · prompt engineering · grounded answers · source citations</p>
+          </li>
+          <li class="skill-group" data-reveal>
+            <h3>Data &amp; analytics</h3>
+            <p>SQL · Power BI · Tableau</p>
+          </li>
+          <li class="skill-group" data-reveal>
+            <h3>AI prototyping</h3>
+            <p>Cursor · n8n · Lovable · Google Stitch · API integrations</p>
+          </li>
+          <li class="skill-group" data-reveal>
+            <h3>Prioritization</h3>
+            <p>MoSCoW · RICE · WSJF</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section class="section section--alt" id="about" data-section aria-labelledby="about-heading">
+      <div class="shell">
+        <div class="section-head">
+          <span class="eyebrow">About</span>
+          <h2 id="about-heading">Product discipline, applied to AI</h2>
+        </div>
+        <div class="grid grid--2">
+          <div class="card" data-reveal>
+            <h3>Product + AI, in one seat</h3>
+            <p>
+              I define the user, their job to be done and the evidence that proves
+              a solution works — then build and evaluate it. Many prototypes stop
+              at a demo; I run the full loop from discovery through launch.
+            </p>
           </div>
-          <div class="cap-item" data-reveal>
-            <h4>Delivery &amp; Analysis</h4>
-            <p>Agile/Scrum, Stakeholder Management, Requirements Elicitation, Process Analysis, Business Rules, UAT, Defect Triage, Jira</p>
-          </div>
-          <div class="cap-item" data-reveal>
-            <h4>AI Product</h4>
-            <p>LLMs, RAG, AI Evaluation, Prompt Engineering, Grounded Answers, Source Citations</p>
-          </div>
-          <div class="cap-item" data-reveal>
-            <h4>Data &amp; Analytics</h4>
-            <p>SQL, Power BI, Tabl</p>
-          </div>
-          <div class="cap-item" data-reveal>
-            <h4>AI Prototyping</h4>
-            <p>Cursor, n8n, Lovable, Google Stitch, API Integrations</p>
-          </div>
-          <div class="cap-item" data-reveal>
-            <h4>Prioritization</h4>
-            <p>MoSCoW, RICE, WSJF</p>
+          <div class="card" data-reveal>
+            <h3>Enterprise-first mindset</h3>
+            <p>
+              Enterprise AI fails for reasons unrelated to model quality — trust,
+              traceability, guardrails and adoption. I design for those constraints
+              from the first requirement, and communicate in plain language, because
+              AI products are bought on clarity.
+            </p>
           </div>
         </div>
       </div>
@@ -399,13 +340,12 @@
     <section class="section" id="contact" data-section aria-labelledby="contact-heading">
       <div class="shell">
         <div class="cta-band">
-          <div>
-              <h2 id="contact-heading">Let's talk AI products</h2>
-             <p>
-               Looking for someone who can own AI products end-to-end — from
-               problem to evaluation to launch? I'm open to Product Owner,
-               AI Product and related opportunities.
-             </p>
+          <div class="cta-main">
+            <h2 id="contact-heading">Let&rsquo;s talk AI products</h2>
+            <p>
+              Open to Product Owner, AI Product and related opportunities — someone
+              who can own a product from problem to evaluation to launch.
+            </p>
             <ul class="contact-list">
               <li>
                 <!-- PLACEHOLDER: replace href with Abhishek's LinkedIn profile -->
@@ -427,12 +367,12 @@
               </li>
             </ul>
           </div>
-          <div>
-            <h3 style="color:#fff">Right now</h3>
-            <p class="small" style="margin-top: 0.5rem">
-              Working as Consultant (Product Owner / Product Manager) at Deloitte Shared Services India,
-              while shipping independent AI products and documenting every
-              decision, metric and trade-off transparently.
+          <div class="cta-side">
+            <h3>Right now</h3>
+            <p>
+              Consultant (Product Owner / Product Manager) at Deloitte Shared
+              Services India, while shipping independent AI products and
+              documenting every decision and trade-off transparently.
             </p>
           </div>
         </div>
@@ -445,10 +385,9 @@
     <div class="shell footer-inner">
       <p>© <span data-year>2026</span> Abhishek Sachdeva · AI Product Portfolio</p>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html#about">About</a>
-        <a href="index.html#experience">Experience</a>
         <a href="index.html#products">AI Products</a>
-        <a href="https://immediate-ellipse-c2a.notion.site/Regulatory-Intelligence-Copilot-3ed1c3ae32a28078bdaded1909c441e2" rel="noopener noreferrer" target="_blank">Regulatory Copilot Case Study</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#about">About</a>
         <a href="case-study-foodmood.html">FoodMood Case Study</a>
         <a href="index.html#contact">Contact</a>
       </nav>
