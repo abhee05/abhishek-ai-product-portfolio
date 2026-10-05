@@ -58,23 +58,22 @@ Search the codebase for these tokens. All are flagged in the HTML with
 
 | Token | Replace with |
 | --- | --- |
-| `YOUR_VERCEL_DOMAIN` | The project's Vercel domain (canonical URL + OG image in `index.html` and the case study) |
 | `REPLACE_WITH_LIVE_PRODUCT_URL.example.com` | Deployed Streamlit app URL (3 spots) |
 | `ABHISHEK_GITHUB_HANDLE` | Abhishek's GitHub handle (hero + contact + repo links) |
 | `REPLACE_WITH_REPO_NAME` | The public GitHub repo name for the copilot |
 | `ABHISHEK_HANDLE` (LinkedIn) | Abhishek's LinkedIn handle (hero + contact) |
 | `REPLACE_WITH_EMAIL@example.com` | A contact email |
 
-Also optional: add a real `assets/og-image.png` and reference it in the OG
-tags.
+The Vercel canonical domain (`abhishek-ai-product-portfolio.vercel.app`) and
+`assets/og-image.png` are already resolved and committed.
 
 ## How to extend
 
 - New project: follow `docs/future-project-template.md`, add a case-study
   `.html`, and swap a "Coming Soon" card on `index.html`.
 - Product screenshots: capture from the live product and save into
-  `assets/<project>/`, then replace the `.shot-frame` placeholders in the case
-  study with `<img>` elements. See `assets/foodmood/README.md`.
+  `assets/<project>/` as WebP at two widths, then point the case study `<img>`
+  tags at them with `srcset`. See `assets/foodmood/README.md`.
 - Style changes: edit the design tokens at the top of `css/styles.css`.
 
 ## Deploy to Vercel

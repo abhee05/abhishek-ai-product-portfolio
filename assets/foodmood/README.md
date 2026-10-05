@@ -1,34 +1,48 @@
 # FoodMood — screenshot assets
 
-This folder is where real FoodMood screenshots belong. The case study
-(`case-study-foodmood.html`) currently renders clean, labelled placeholder
-containers in place of screenshots. Nothing is fabricated — no stock imagery is
-presented as product UI.
+These are real captures of the deployed FoodMood MVP at
+https://food-mood-ashy.vercel.app/, taken during two-browser, two-participant
+validation. Each is exported at two widths and referenced with `srcset`, so the
+browser only downloads what it needs. Nothing here is fabricated or stock.
 
-## Drop-in filenames
+Names shown in the captures ("Abhishek", "Aditi") are the test participants used
+for those sessions. Session codes differ per capture because each screen came
+from a real, separate session.
 
-Take these captures from the live product at https://food-mood-ashy.vercel.app/
-and save them here with exactly these names:
+## Files and the screens they show
 
-| Filename | Screen |
-| --- | --- |
-| `home.png` | Home / create-session screen |
-| `lobby.png` | Two-person lobby with session code and invite link |
-| `join.png` | Join FoodMood screen reached from the invite link |
-| `rating.png` | Rating a food option (heart / maybe / not-today) |
-| `waiting.png` | Waiting state after finishing your 12 options |
-| `reveal.png` | Match reveal grouped by Perfect / Possible / Backup |
-| `proposal.png` | Proposal waiting for the other participant |
-| `final.png` | Final FoodMood screen |
+| Base filename | Screen | Story step |
+| --- | --- | --- |
+| `01-create-invite` | Creator lobby — join code, invite link, "copy invite link", 1 of 2 seated, waiting for partner | A · Create and invite |
+| `02-direct-join` | Join FoodMood opened via `?join=` with the code prefilled, name field, Join CTA | B · Direct join |
+| `03-private-rating` | Private rating, option 1 of 12, with Not today / Maybe / Craving it | C · Private rating |
+| `04-match-reveal` | Match reveal — 2 Perfect, 2 Possible, 2 Backup | D · Match reveal |
+| `05-proposal-confirmation` | The other participant's pick with Accept / Reject & start another round | E · Proposal and confirmation |
+| `06-final-foodmood` | Tonight's FoodMood with decision summary and another-round option | F · Final FoodMood |
 
-## How to activate them
+Each base filename has two files:
 
-In `case-study-foodmood.html`, find each placeholder block and replace its
-inner content with:
+- `<base>-720.webp` — small, served to narrow viewports
+- `<base>-1440.webp` — large, served to wider viewports
 
-```html
-<img src="assets/foodmood/home.png" alt="FoodMood home screen with name field and create-session button" loading="lazy" />
-```
+`assets/og-image.png` (1200×630) is the social share card, composed from the
+final FoodMood screen. It is regenerated from
+`06-final-foodmood-1440.webp` if that capture changes.
 
-Keep the `<figcaption>` text unless the real capture changes what the caption
-claims. Recommended export is a 4:3 or 3:4 crop at roughly 1200px wide, PNG.
+## Replacing a capture
+
+1. Recapture the screen at 1280px wide or wider.
+2. Export as WebP at 720px and 1440px wide, keeping the aspect ratio consistent
+   across the set — the case study relies on the frames feeling like one product.
+3. Update the two `<img>` tags for that step in `case-study-foodmood.html`
+   (`srcset`, `src` and the `width`/`height` attributes).
+
+Keep the `width`/`height` attributes accurate; they are what prevents layout
+shift while the images load.
+
+## Do not
+
+- Do not use stock imagery or design mockups as product screenshots.
+- Do not crop so tightly that the surrounding UI context is lost.
+- Do not commit capture files with session codes or names you would not want
+  published.

@@ -132,16 +132,17 @@ revenue, satisfaction or match-rate numbers. The validation section lists the
 flows that were functionally tested in real two-browser sessions — no
 quantitative results. "What I'd explore next" items are hypotheses only.
 
-**Screenshots:** none exist locally. The case study renders labelled
-`.shot-frame` placeholders. Drop real captures into `assets/foodmood/` per
-`assets/foodmood/README.md`. Never substitute stock imagery for product UI.
+**Screenshots:** real captures of the deployed MVP are committed in
+`assets/foodmood/` as WebP at two widths each, referenced with `srcset` by
+`case-study-foodmood.html`. Never substitute stock imagery or design mockups
+for product UI. Regenerate `assets/og-image.png` from
+`06-final-foodmood-1440.webp` if that capture changes.
 
 ## Section: URL / account placeholders
 
 `README.md` (site section) contains the authoritative list. These values must
 be supplied by Abhishek before deployment:
 
-- Vercel canonical/OG domain (`YOUR_VERCEL_DOMAIN`)
 - Live product URL (streamlit app)
 - GitHub repo URL
 - LinkedIn profile handle

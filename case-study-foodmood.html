@@ -8,19 +8,24 @@
   <title>FoodMood — Two-Person Decision Product Case Study | Abhishek Sachdeva</title>
   <meta name="description" content="Product case study: FoodMood, a privacy-first two-person food decision product. From problem framing and match logic to a deployed, two-browser-tested MVP on Supabase." />
   <meta name="author" content="Abhishek Sachdeva" />
-  <link rel="canonical" href="https://YOUR_VERCEL_DOMAIN/case-study-foodmood.html" />
+  <link rel="canonical" href="https://abhishek-ai-product-portfolio.vercel.app/case-study-foodmood.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="FoodMood — Two-Person Social Decision Product Case Study" />
   <meta property="og:description" content="A privacy-first decision product that turns 'What should we eat?' into a two-person matching experience — from private preferences to mutual matches and a confirmed FoodMood." />
-  <meta property="og:url" content="https://YOUR_VERCEL_DOMAIN/case-study-foodmood.html" />
+  <meta property="og:url" content="https://abhishek-ai-product-portfolio.vercel.app/case-study-foodmood.html" />
+  <meta property="og:image" content="https://abhishek-ai-product-portfolio.vercel.app/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="FoodMood final screen announcing the agreed pick as tonight's FoodMood." />
   <meta property="og:site_name" content="Abhishek Sachdeva Portfolio" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="FoodMood — Two-Person Social Decision Product Case Study" />
   <meta name="twitter:description" content="From problem framing to a deployed, two-browser-tested MVP: private preference capture, three-level reaction model and mutual match logic." />
+  <meta name="twitter:image" content="https://abhishek-ai-product-portfolio.vercel.app/assets/og-image.png" />
 
   <!-- Icons -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -74,7 +79,7 @@
           </a>
           <div class="btn-row">
             <a class="btn btn--ghost btn--sm" href="https://food-mood-ashy.vercel.app/" rel="noopener noreferrer" target="_blank">Open Live Product</a>
-            <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/Food" rel="noopener noreferrer" target="_blank">View GitHub</a>
+            <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/FoodMood" rel="noopener noreferrer" target="_blank">View GitHub</a>
           </div>
         </div>
 
@@ -171,7 +176,7 @@
           </div>
           <div class="btn-row" style="margin: 1.25rem 0 0.5rem">
             <a class="btn btn--accent btn--sm" href="https://food-mood-ashy.vercel.app/" rel="noopener noreferrer" target="_blank">Open Live Product</a>
-            <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/Food" rel="noopener noreferrer" target="_blank">View GitHub</a>
+            <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/FoodMood" rel="noopener noreferrer" target="_blank">View GitHub</a>
           </div>
           <div class="callout callout--note">
             <span class="callout-label">Project independence</span>
@@ -312,77 +317,106 @@
             container; the round is the decision attempt.
           </p>
 
-          <div class="shot-grid" role="group" aria-label="FoodMood product screens (placeholders awaiting real screenshots)">
+          <div class="shots" role="group" aria-label="FoodMood product screens, captured from the deployed V1 MVP">
             <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: FoodMood home and create session screen">
-                <span class="shot-step">Screen 01</span>
-                <span class="shot-label">Home · create session</span>
-                <code>assets/foodmood/home.png</code>
+              <div class="shot-frame">
+                <img src="assets/foodmood/01-create-invite-1440.webp"
+                     srcset="assets/foodmood/01-create-invite-720.webp 720w, assets/foodmood/01-create-invite-1440.webp 1440w"
+                     sizes="(max-width: 1024px) 100vw, 768px"
+                     width="1440" height="1125"
+                     loading="lazy" decoding="async"
+                     alt="FoodMood creator lobby after starting a session: a join code, a shareable invite link with a Copy invite link button, one of two participants seated, and a waiting-for-your-partner state." />
               </div>
-              <figcaption>Name entry and session creation — the only manual step before the invite link exists.</figcaption>
+              <figcaption>
+                <span class="shot-step">Step A · Create and invite</span>
+                <span class="shot-label">The creator lobby — one code, one link, one seat filled</span>
+                <span>Create a private two-person session and invite your partner with a direct join link.</span>
+              </figcaption>
             </figure>
+
             <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: two-person lobby with session code and invite link">
-                <span class="shot-step">Screen 02</span>
-                <span class="shot-label">Two-person lobby</span>
-                <code>assets/foodmood/lobby.png</code>
+              <div class="shot-frame">
+                <img src="assets/foodmood/02-direct-join-1440.webp"
+                     srcset="assets/foodmood/02-direct-join-720.webp 720w, assets/foodmood/02-direct-join-1440.webp 1440w"
+                     sizes="(max-width: 1024px) 100vw, 768px"
+                     width="1440" height="1125"
+                     loading="lazy" decoding="async"
+                     alt="FoodMood join screen opened from an invite link, with the session join code already filled in, a name field, and a Join FoodMood button." />
               </div>
-              <figcaption>Session code plus invite link, with copy behavior for both.</figcaption>
+              <figcaption>
+                <span class="shot-step">Step B · Direct join</span>
+                <span class="shot-label">The invited participant lands on Join FoodMood, code already in place</span>
+                <span>Invite links remove unnecessary setup — the session is already identified, so the second participant only needs to enter their name.</span>
+              </figcaption>
             </figure>
+
             <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: join screen opened from the invite link with the session code prefilled">
-                <span class="shot-step">Screen 03</span>
-                <span class="shot-label">Join · code prefilled</span>
-                <code>assets/foodmood/join.png</code>
+              <div class="shot-frame">
+                <img src="assets/foodmood/03-private-rating-1440.webp"
+                     srcset="assets/foodmood/03-private-rating-720.webp 720w, assets/foodmood/03-private-rating-1440.webp 1440w"
+                     sizes="(max-width: 1024px) 100vw, 768px"
+                     width="1440" height="1125"
+                     loading="lazy" decoding="async"
+                     alt="FoodMood private rating screen showing option 1 of 12 with a food card and three reactions — Not today, Maybe and Craving it — under a note that choices stay 100% private until both finish." />
               </div>
-              <figcaption>The invite URL drops the partner straight into Join FoodMood with the code already in place.</figcaption>
+              <figcaption>
+                <span class="shot-step">Step C · Private rating</span>
+                <span class="shot-label">Rate the same 12 options, independently</span>
+                <span>Once both participants join, each person rates the same food options independently.</span>
+              </figcaption>
             </figure>
+
             <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: private rating screen with heart, maybe and not-today reactions">
-                <span class="shot-step">Screen 04</span>
-                <span class="shot-label">Private rating</span>
-                <code>assets/foodmood/rating.png</code>
+              <div class="shot-frame">
+                <img src="assets/foodmood/04-match-reveal-1440.webp"
+                     srcset="assets/foodmood/04-match-reveal-720.webp 720w, assets/foodmood/04-match-reveal-1440.webp 1440w"
+                     sizes="(max-width: 1024px) 100vw, 768px"
+                     width="1440" height="1125"
+                     loading="lazy" decoding="async"
+                     alt="FoodMood match reveal listing six shared matches grouped into three tiers — two Perfect matches, two Possible matches and two Backup matches — with no individual reactions shown." />
               </div>
-              <figcaption>One option at a time, three reactions, nothing about the partner's answers visible.</figcaption>
+              <figcaption>
+                <span class="shot-step">Step D · Match reveal</span>
+                <span class="shot-label">Agreement only — ranked Perfect, Possible, Backup</span>
+                <span>FoodMood reveals agreement, not individual reactions, and ranks mutual options as Perfect, Possible or Backup matches.</span>
+              </figcaption>
             </figure>
+
             <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: waiting state after completing all twelve options">
-                <span class="shot-step">Screen 05</span>
-                <span class="shot-label">Waiting for partner</span>
-                <code>assets/foodmood/waiting.png</code>
+              <div class="shot-frame">
+                <img src="assets/foodmood/05-proposal-confirmation-1440.webp"
+                     srcset="assets/foodmood/05-proposal-confirmation-720.webp 720w, assets/foodmood/05-proposal-confirmation-1440.webp 1440w"
+                     sizes="(max-width: 1024px) 100vw, 768px"
+                     width="1440" height="1125"
+                     loading="lazy" decoding="async"
+                     alt="FoodMood proposal screen showing the other participant's pick with Accept and Reject &amp; start another round controls, which only the confirming participant can act on." />
               </div>
-              <figcaption>Choices locked in — with an explicit "your choices are hidden" reassurance.</figcaption>
+              <figcaption>
+                <span class="shot-step">Step E · Proposal and confirmation</span>
+                <span class="shot-label">A mutual match still needs a second person to say yes</span>
+                <span>A mutual match still requires agreement: one person proposes and the other confirms or starts another round.</span>
+              </figcaption>
             </figure>
+
             <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: match reveal grouped by perfect, possible and backup tiers">
-                <span class="shot-step">Screen 06</span>
-                <span class="shot-label">Match reveal</span>
-                <code>assets/foodmood/reveal.png</code>
+              <div class="shot-frame">
+                <img src="assets/foodmood/06-final-foodmood-1440.webp"
+                     srcset="assets/foodmood/06-final-foodmood-720.webp 720w, assets/foodmood/06-final-foodmood-1440.webp 1440w"
+                     sizes="(max-width: 1024px) 100vw, 768px"
+                     width="1440" height="1125"
+                     loading="lazy" decoding="async"
+                     alt="FoodMood final result screen announcing the agreed pick as tonight's FoodMood, labelled a unanimous craving, with a decision summary and an option to start another round." />
               </div>
-              <figcaption>Shared matches only, grouped by tier, ordered strongest first.</figcaption>
-            </figure>
-            <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: proposal waiting for the other participant to accept or reject">
-                <span class="shot-step">Screen 07</span>
-                <span class="shot-label">Proposal &amp; confirmation</span>
-                <code>assets/foodmood/proposal.png</code>
-              </div>
-              <figcaption>Proposer waits; only the other participant holds the accept or reject controls.</figcaption>
-            </figure>
-            <figure class="shot">
-              <div class="shot-frame" role="img" aria-label="Screenshot placeholder: final FoodMood screen showing the agreed option">
-                <span class="shot-step">Screen 08</span>
-                <span class="shot-label">Final FoodMood</span>
-                <code>assets/foodmood/final.png</code>
-              </div>
-              <figcaption>Tonight's agreed option, with the option to start another round in the same session.</figcaption>
+              <figcaption>
+                <span class="shot-step">Step F · Final FoodMood</span>
+                <span class="shot-label">The decision, without exposing the rejected options</span>
+                <span>A confirmed choice becomes tonight's FoodMood, completing the decision without exposing either person's rejected preferences.</span>
+              </figcaption>
             </figure>
           </div>
           <p class="shot-note">
-            These are labelled placeholders, not product screenshots. Real
-            captures are dropped into <code>assets/foodmood/</code> as they
-            become available — see the README in that folder for the expected
-            filenames and alt text.
+            Screens are captured from the deployed FoodMood MVP. Names shown are
+            test participants used during two-browser validation.
           </p>
         </section>
 
@@ -394,6 +428,7 @@
             Each participant reacts to each of the 12 options with one of three
             reactions:
           </p>
+          <h3 class="sr-only">The three reactions</h3>
           <div class="point-grid">
             <div class="point-card">
               <span class="point-index">R1</span>
@@ -555,6 +590,7 @@
             each one would have added surface area without making the core
             decision better.
           </p>
+          <h3 class="sr-only">Included and excluded from V1</h3>
           <div class="scope-grid">
             <div class="scope-col is-in">
               <h4>In scope (V1)</h4>
@@ -699,67 +735,63 @@
           </p>
 
           <h3>Data model</h3>
-          <p>Five primary entities:</p>
-          <ul>
-            <li><strong>food_option</strong> — the fixed deck of 12 options participants rate.</li>
-            <li><strong>session</strong> — one private two-person container, holding the join code and invite state.</li>
-            <li><strong>participant</strong> — a named seat in a session, associated with an authenticated anonymous user.</li>
-            <li><strong>round</strong> — one decision attempt inside a session; carries proposal and final state.</li>
-            <li><strong>reaction</strong> — one participant's reaction to one food option within one round.</li>
-          </ul>
+          <p>
+            Five entities carry the product: the fixed deck of
+            <strong>food options</strong>, the private two-person
+            <strong>session</strong>, the two <strong>participants</strong> in
+            it, each <strong>round</strong> of decision-making, and every
+            <strong>reaction</strong> a participant gives an option in a round.
+          </p>
           <div class="callout callout--note">
             <span class="callout-label">Key architectural principle</span>
             <p>
-              Matches are <strong>derived from reactions</strong>, not permanently
-              stored as redundant match records. There is no match table to keep
-              in sync, no chance of a match record contradicting the reactions it
-              came from, and the match logic can change without a data migration.
-              The same principle shows up as a product decision — a match is
-              something both people earned in this round, not a stored fact.
+              Matches are <strong>derived from reactions</strong> rather than
+              stored as separate match records. There is no second copy of the
+              truth to fall out of sync, and the match logic can change without a
+              data migration. The same principle shows up as a product decision —
+              a match is something both people earned in this round, not a stored
+              fact.
             </p>
           </div>
 
-          <h3>Request and state flow</h3>
+          <h3>How the two participants stay in sync</h3>
           <p>
-            Every meaningful action in FoodMood goes through a controlled backend
-            function rather than a direct client read or write, which is what
-            makes the privacy rules enforceable:
+            FoodMood is a two-player product, so a stale screen is a broken
+            screen. Every meaningful action goes through a controlled backend
+            function that checks the caller really is a participant in that
+            session, and both participants are returned the same shared state
+            rather than their own private view of it.
           </p>
           <div class="flow" role="img" aria-label="FoodMood request flow through controlled backend functions">
             <div class="flow-step is-accent">
               <span class="step-num">1</span>
-              <span class="step-name">Client action</span>
+              <span class="step-name">One participant acts</span>
               <span class="step-detail">Create, join, react, propose, accept, reject, next round</span>
             </div>
             <div class="flow-arrow" aria-hidden="true">→</div>
             <div class="flow-step">
               <span class="step-num">2</span>
-              <span class="step-name">Secure RPC function</span>
-              <span class="step-detail">Validates membership and the two-person rule</span>
+              <span class="step-name">Backend validates</span>
+              <span class="step-detail">Confirms session membership and the two-person rule</span>
             </div>
             <div class="flow-arrow" aria-hidden="true">→</div>
             <div class="flow-step">
               <span class="step-num">3</span>
-              <span class="step-name">Row Level Security</span>
-              <span class="step-detail">Scope of access enforced in the database</span>
-            </div>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <div class="flow-step">
-              <span class="step-num">4</span>
-              <span class="step-name">Session state returned</span>
-              <span class="step-detail">Shared state only — matches derived once both finish</span>
+              <span class="step-name">Shared state returns</span>
+              <span class="step-detail">Matches derived only once both participants finish</span>
             </div>
             <div class="flow-arrow" aria-hidden="true">→</div>
             <div class="flow-step is-output">
-              <span class="step-num">5</span>
-              <span class="step-name">Both participants update</span>
+              <span class="step-num">4</span>
+              <span class="step-name">Both screens agree</span>
               <span class="step-detail">Same round, same proposal, same final FoodMood</span>
             </div>
           </div>
           <p class="flow-caption">
-            Frontend: React · TypeScript · Vite. Backend: Supabase · PostgreSQL ·
-            anonymous authentication · Row Level Security · secure RPC functions.
-            Deployment: GitHub · Vercel.
+            React and TypeScript on the front end, Supabase and PostgreSQL behind
+            it, anonymous accounts, database-level access rules and a set of
+            protected functions for every write. Hosted on Vercel, version
+            controlled on GitHub.
           </p>
         </section>
 
@@ -803,6 +835,7 @@
             is what two separate people see at the same time.
           </p>
           <p>Validated flows:</p>
+          <h3 class="sr-only">Validated flows</h3>
           <div class="point-grid">
             <div class="point-card"><span class="point-index">T01</span><h4>Session creation</h4><p>A name produces a session with a code and invite link.</p></div>
             <div class="point-card"><span class="point-index">T02</span><h4>Direct invite-link joining</h4><p>The invite URL opens Join FoodMood with the session code prefilled.</p></div>
@@ -854,21 +887,20 @@
             deliberately short and boring in the right places.
           </p>
           <ul class="source-list">
-            <li><span class="source-type">Front</span><span><strong>React</strong><br />Component-based UI for the multi-state session flow.</span></li>
-            <li><span class="source-type">Front</span><span><strong>TypeScript</strong><br />Typed session, participant, round and reaction state — which is what makes derived match logic safe to change.</span></li>
-            <li><span class="source-type">Front</span><span><strong>Vite</strong><br />Fast local development and a small production build.</span></li>
-            <li><span class="source-type is-internal">Back</span><span><strong>Supabase</strong><br />Managed backend for auth, database and real-time-style session updates.</span></li>
-            <li><span class="source-type is-internal">Back</span><span><strong>PostgreSQL</strong><br />Relational store for sessions, participants, rounds, options and reactions.</span></li>
-            <li><span class="source-type is-internal">Back</span><span><strong>Anonymous authentication</strong><br />Account-free participation with an authenticated identity behind each participant.</span></li>
-            <li><span class="source-type is-internal">Back</span><span><strong>Row Level Security</strong><br />Access scope enforced in the database, not trusted to the client.</span></li>
-            <li><span class="source-type is-internal">Back</span><span><strong>Secure RPC functions</strong><br />The controlled path for creating, joining, reacting, proposing, accepting, rejecting and starting a new round.</span></li>
-            <li><span class="source-type">Deploy</span><span><strong>GitHub + Vercel</strong><br />Version-controlled source and static hosting for the deployed MVP.</span></li>
+            <li><span class="source-type">Front</span><span><strong>React + TypeScript (Vite)</strong><br />A typed, multi-state session flow where the interface has to stay honest about two different people's view of the same round.</span></li>
+            <li><span class="source-type is-internal">Back</span><span><strong>Supabase (PostgreSQL)</strong><br />Managed database, anonymous sign-in and live session state, so two browsers agree without either of them polling a server.</span></li>
+            <li><span class="source-type is-internal">Back</span><span><strong>Database-level access rules and protected functions</strong><br />Privacy is enforced where the data lives, not in the interface — participants are verified before any reaction, proposal or match is readable.</span></li>
+            <li><span class="source-type">Deploy</span><span><strong>GitHub + Vercel</strong><br />Version-controlled source and a public URL the product can actually be judged on.</span></li>
           </ul>
-          <h3>Development and product tools</h3>
+          <p class="small muted">
+            The stack was chosen to keep the case study about product decisions.
+            Where a simpler choice existed, I took it.
+          </p>
+          <h3>How I worked</h3>
           <ul>
             <li><strong>Google Stitch</strong> — UX exploration and wireframing during the visualization stage.</li>
-            <li><strong>AI-assisted development workflow</strong> — used as an implementation and troubleshooting accelerator.</li>
             <li><strong>Cursor / OpenCode</strong> — implementation support and debugging.</li>
+            <li><strong>AI-assisted development</strong> — used as an implementation and troubleshooting accelerator, never as the source of a product rule.</li>
           </ul>
           <div class="callout callout--warn">
             <span class="callout-label">Credit where it is due</span>
@@ -891,6 +923,7 @@
             implementation exists to demonstrate that ownership — the code is the
             evidence, not the contribution.
           </p>
+          <h3 class="sr-only">What I owned</h3>
           <div class="point-grid">
             <div class="point-card"><span class="point-index">Own</span><h4>Problem framing</h4><p>Defining whose problem this is and why the existing conversation fails at it.</p></div>
             <div class="point-card"><span class="point-index">Own</span><h4>User journey</h4><p>The full path from session creation to a confirmed FoodMood.</p></div>
@@ -927,24 +960,26 @@
           <span class="section-number">14</span>
           <h2 id="outcome-title">V1 Outcome</h2>
           <p>
-            What V1 actually delivers today:
+            V1 reached its actual goal: a <strong>working, deployed two-person
+            MVP with the complete decision journey validated across two browser
+            sessions</strong>.
           </p>
           <ul>
-            <li><strong>A working, deployed MVP</strong> — live and usable at <a href="https://food-mood-ashy.vercel.app/" rel="noopener noreferrer" target="_blank">food-mood-ashy.vercel.app</a>, with source on <a href="https://github.com/abhee05/Food" rel="noopener noreferrer" target="_blank">GitHub</a>.</li>
-            <li><strong>The core decision loop, end to end.</strong> Create → invite → join → rate privately → reveal matches → propose → accept → tonight's FoodMood → another round.</li>
-            <li><strong>A working privacy model.</strong> Individual reactions are not exposed, and matches unlock only after both participants finish.</li>
-            <li><strong>Real cross-browser synchronization</strong> across two participants in a single session.</li>
-            <li><strong>Repeated decisions without re-onboarding.</strong> Multiple rounds run inside the same two-person session.</li>
-            <li><strong>Validated flows</strong> covering the full session from creation through finalization.</li>
+            <li><strong>It ships and it runs.</strong> Live and usable at <a href="https://food-mood-ashy.vercel.app/" rel="noopener noreferrer" target="_blank">food-mood-ashy.vercel.app</a>, with source on <a href="https://github.com/abhee05/FoodMood" rel="noopener noreferrer" target="_blank">GitHub</a>.</li>
+            <li><strong>The core decision loop works end to end.</strong> Create → invite → join → rate privately → reveal matches → propose → accept → tonight's FoodMood → another round.</li>
+            <li><strong>The privacy model works, not just the privacy promise.</strong> Individual reactions are never exposed, and matches unlock only after both participants finish.</li>
+            <li><strong>Two real participants, two browsers, one session.</strong> State stays synchronized without a manual refresh, and multiple rounds run without re-onboarding.</li>
+            <li><strong>Seventeen validated flows</strong> covering the session from creation through finalization.</li>
           </ul>
           <div class="callout callout--warn">
             <span class="callout-label">What I am not claiming</span>
             <p>
-              No user numbers, adoption, revenue, satisfaction scores or
-              conversion metrics are claimed for FoodMood. It has not been
-              piloted with an audience; it exists as a working, validated MVP and
-              as evidence of how I own a product. Every future item in the next
-              section is a hypothesis, not shipped functionality.
+              No user numbers, adoption, revenue, satisfaction scores, conversion
+              or time-saved figures are claimed for FoodMood. It has not been
+              piloted with an audience, so there is no evidence base for any of
+              them — the outcome claimed here is a working, validated product,
+              not a proven commercial one. Every item in the next section is a
+              hypothesis, not shipped functionality.
             </p>
           </div>
         </section>
@@ -982,12 +1017,12 @@
           <p>
             A second working product, built to show the same thing from a
             different angle: taking an ambiguous product idea, cutting it to
-            something provable, writing the rules precisely, testing it with real
-            users, and shipping it.
+            something provable, writing the rules precisely, testing it with two
+            participants across two browsers, and shipping it.
           </p>
           <div class="btn-row" style="justify-content: center">
             <a class="btn btn--accent" href="https://food-mood-ashy.vercel.app/" rel="noopener noreferrer" target="_blank">Open Live Product</a>
-            <a class="btn btn--ghost" href="https://github.com/abhee05/Food" rel="noopener noreferrer" target="_blank">View GitHub</a>
+            <a class="btn btn--ghost" href="https://github.com/abhee05/FoodMood" rel="noopener noreferrer" target="_blank">View GitHub</a>
             <a class="btn btn--ghost" href="case-study-regulatory-copilot.html">Read the other case study</a>
           </div>
         </section>
