@@ -42,7 +42,10 @@
     <nav class="nav shell" aria-label="Primary">
       <a class="brand" href="index.html" aria-label="Abhishek Sachdeva — home">
         <span class="brand-mark" aria-hidden="true">AS</span>
-        Abhishek Sachdeva
+        <span class="brand-text">
+          <span class="brand-name">Abhishek Sachdeva</span>
+          <span class="brand-role">Product Manager &middot; AI &amp; GenAI</span>
+        </span>
       </a>
 
       <button
@@ -54,10 +57,9 @@
       ><span aria-hidden="true"></span></button>
 
       <ul class="nav-links" id="primary-nav" data-nav-menu>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#capabilities">Capabilities</a></li>
         <li><a href="index.html#experience">Experience</a></li>
-        <li><a href="index.html#products">AI Products</a></li>
-        <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -73,9 +75,7 @@
             <span aria-hidden="true">←</span> Back to Portfolio
           </a>
           <div class="btn-row">
-            <!-- PLACEHOLDER: replace href with the deployed Streamlit app URL -->
             <a class="btn btn--ghost btn--sm" href="https://regulatory-intelligence-copilot-ezc6ahmhhs6vjjnjoy7iz9.streamlit.app/" rel="noopener noreferrer" target="_blank">Try Live Product</a>
-            <!-- PLACEHOLDER: replace href with the public GitHub repo URL -->
             <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/regulatory-intelligence-copilot" rel="noopener noreferrer" target="_blank">View GitHub</a>
           </div>
         </div>
@@ -107,6 +107,35 @@
             <dd>Current · Applicable · Authoritative · Traceable</dd>
           </div>
         </dl>
+        <!-- Scannable narrative arc. Every value below is restated from the
+             sections that follow; nothing new is claimed here. -->
+        <ol class="case-arc" aria-label="Case study at a glance">
+          <li>
+            <p class="case-arc-step">Problem</p>
+            <p class="case-arc-text">Compliance teams cannot find the current, applicable regulatory position &mdash; with proof &mdash; fast enough to serve the business.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">User</p>
+            <p class="case-arc-text">Compliance analyst or manager at an Indian NBFC, measured on correctness and traceability rather than speed alone.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Goal</p>
+            <p class="case-arc-text">A traceable answer, not a chatbot conversation &mdash; that decides what every downstream decision protects.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">MVP</p>
+            <p class="case-arc-text">RBI KYC / CDD corpus plus four labelled simulated internal policies; grounded answers with citations.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Evaluation</p>
+            <p class="case-arc-text">Retrieval-first on a ~50-question golden set: Hit@1 <span class="from">0.718</span> &rarr; <span class="to">0.872</span>, MRR <span class="from">0.843</span> &rarr; <span class="to">0.927</span>.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Outcome</p>
+            <p class="case-arc-text">Freshness-aware ranking, source-type routing and explicit &ldquo;insufficient evidence&rdquo; instead of a confident guess.</p>
+          </li>
+        </ol>
+
       </div>
     </section>
 
@@ -1101,9 +1130,7 @@
             evidence I want to bring to an AI Product role.
           </p>
           <div class="btn-row" style="justify-content: center">
-            <!-- PLACEHOLDER: replace href with the deployed Streamlit app URL -->
             <a class="btn btn--accent" href="https://regulatory-intelligence-copilot-ezc6ahmhhs6vjjnjoy7iz9.streamlit.app/" rel="noopener noreferrer" target="_blank">Try Live Product</a>
-            <!-- PLACEHOLDER: replace href with the public GitHub repo URL -->
             <a class="btn btn--ghost" href="https://github.com/abhee05/regulatory-intelligence-copilot" rel="noopener noreferrer" target="_blank">View GitHub</a>
           </div>
         </section>
@@ -1117,7 +1144,7 @@
     <div class="shell footer-inner">
       <p>© <span data-year>2026</span> Abhishek Sachdeva · AI Product Portfolio</p>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html#about">About</a>
+        <a href="index.html#capabilities">Capabilities</a>
         <a href="index.html#experience">Experience</a>
         <a href="index.html#products">AI Products</a>
         <a href="case-study-regulatory-copilot.html" aria-current="page">Case Study</a>

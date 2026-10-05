@@ -17,8 +17,12 @@ Everything on the public site either supports those four goals or gets cut.
 
 ## Positioning guardrails (do not violate)
 
-1. **Do not claim a Product Manager title** where none was held. Job titles on
-   the Experience section are the real, contractual titles.
+1. **Positioning may target PM roles; job titles may not be inflated.** The
+   hero targets `Product Manager | Product Owner | AI & GenAI Products` because
+   that is the role being applied for. Every row in the Experience section still
+   uses the real resume title (Product Owner, Business Analyst, Network
+   Engineer, Technical Support Consultant). Never invent a PM title for a past
+   employer, and never backdate a promotion.
 2. **Do not present independent portfolio products as Deloitte/client
    products.** Both the Regulatory Intelligence Copilot and FoodMood are
    independent, portfolio-owned products. Their case studies say so
@@ -40,28 +44,37 @@ Everything on the public site either supports those four goals or gets cut.
 
 | Route | Purpose |
 | --- | --- |
-| `index.html` | Home: hero, about, experience overview, featured products, capabilities, contact |
+| `index.html` | Home: hero, products, capabilities, approach, experience, contact |
 | `case-study-regulatory-copilot.html` | Flagship project 01 case study (full 30 sections) |
 | `case-study-foodmood.html` | Flagship project 02 case study (15 sections) |
 | `css/styles.css` | Single stylesheet, design tokens at top |
 | `js/main.js` | Vanilla JS: nav, reveal-on-scroll, TOC, animated metric bars |
-| `assets/` | favicon.svg, og-image (when added), per-project screenshot folders |
+| `assets/` | favicon, og-image, per-project screenshot folders, resume PDF |
 | `docs/` | Internal maintenance docs (not linked from the site) |
 
 ## Adding a new project
 
-1. Copy `docs/future-project-template.md` → write the full case study.
-2. Create `<your-case-study>.html` reusing existing styles/components.
-3. Replace one of the "Coming Soon" cards on `index.html` with the real
-   project card + a link to the new case study.
-4. Add the project to `docs/content-source-of-truth.md`.
-5. Update the "Up next" placeholders and `og:image` if the flagship changes.
+Only completed work is published, so there is no placeholder flow and no "Coming
+Soon" slot to swap out. A new project means all of these, in order:
+
+1. Write the case study as `<project>.html`, reusing the existing
+   components (`.cs-section`, `.case-arc`, `.flow`, `.decision-grid`,
+   `.compare-table`, `.callout`).
+2. Add the project to `docs/content-source-of-truth.md` first — verified facts
+   before public claims.
+3. Add an `<article class="work">` block to `index.html`, with the real
+   screenshot, the product's three strongest facts, its product decisions and
+   its stack.
+4. Update `og:image` only if the flagship product changes.
 
 ## Design conventions
 
 - Design tokens live at the top of `css/styles.css` — change colors/type there.
-- `grid--2/3/4`, `card`, `metric-card`, `flow`, `point-grid`, `decision-grid`,
-  `roadmap`, `callout`, `risk-table`, `compare-table` are the building blocks.
+- Homepage building blocks: `.work`, `.case-arc`, `.capability-grid`, `.role`,
+  `.outcome-grid`, `.contact-card`, `.pipeline`, `.deltas`.
+- Case-study building blocks: `.cs-section`, `.case-arc`, `.flow`,
+  `.point-grid`, `.decision-grid`, `.roadmap`, `.callout`, `.risk-table`,
+  `.compare-table`, `.metric`.
 - Keep the restrained, enterprise aesthetic. No glowing gradients, no
   skill-percentage bars, no emoji in content.
 - All interactive behavior stays in `js/main.js`.

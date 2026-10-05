@@ -47,7 +47,10 @@
     <nav class="nav shell" aria-label="Primary">
       <a class="brand" href="index.html" aria-label="Abhishek Sachdeva — home">
         <span class="brand-mark" aria-hidden="true">AS</span>
-        Abhishek Sachdeva
+        <span class="brand-text">
+          <span class="brand-name">Abhishek Sachdeva</span>
+          <span class="brand-role">Product Manager &middot; AI &amp; GenAI</span>
+        </span>
       </a>
 
       <button
@@ -59,10 +62,9 @@
       ><span aria-hidden="true"></span></button>
 
       <ul class="nav-links" id="primary-nav" data-nav-menu>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#capabilities">Capabilities</a></li>
         <li><a href="index.html#experience">Experience</a></li>
-        <li><a href="index.html#products">AI Products</a></li>
-        <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -111,6 +113,35 @@
             <dd>Private · Mutual · Confirmed · No forcing</dd>
           </div>
         </dl>
+        <!-- Scannable narrative arc. Every value below is restated from the
+             sections that follow; nothing new is claimed here. -->
+        <ol class="case-arc" aria-label="Case study at a glance">
+          <li>
+            <p class="case-arc-step">Problem</p>
+            <p class="case-arc-text">Two people cannot agree on what to eat, because the conversation collects no honest, comparable signal &mdash; and exposes every preference the moment it is stated.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Users</p>
+            <p class="case-arc-text">Exactly two participants per private session, deciding together across repeated rounds.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Goal</p>
+            <p class="case-arc-text">Collapse a negotiation into a shortlist both people can accept, without anyone conceding publicly.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">MVP</p>
+            <p class="case-arc-text">12 shared options, private reactions, match reveal, propose &rarr; accept or reject, then another round.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Decisions</p>
+            <p class="case-arc-text">Matches derived from reactions and never stored; only the overlap is revealed, so nobody defends a taste.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Outcome</p>
+            <p class="case-arc-text">Deployed V1 on Vercel, synchronized across two browsers, and functionally tested end to end.</p>
+          </li>
+        </ol>
+
       </div>
     </section>
 
@@ -1036,7 +1067,7 @@
     <div class="shell footer-inner">
       <p>© <span data-year>2026</span> Abhishek Sachdeva · AI Product Portfolio</p>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="index.html#about">About</a>
+        <a href="index.html#capabilities">Capabilities</a>
         <a href="index.html#experience">Experience</a>
         <a href="index.html#products">AI Products</a>
         <a href="case-study-foodmood.html" aria-current="page">FoodMood Case Study</a>

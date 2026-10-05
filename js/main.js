@@ -35,6 +35,37 @@
     });
   }
 
+  /* ---------- Resume link: hide if the PDF is not published yet ----------
+     The resume is a private asset the owner drops in deliberately. Rather than
+     shipping a dead link, probe it once and remove the CTAs if it is absent. */
+  var resumeLinks = document.querySelectorAll("[data-resume-link]");
+
+  if (resumeLinks.length) {
+    var resumeHref = resumeLinks[0].getAttribute("href");
+
+    var resumeItems = document.querySelectorAll("[data-resume-link-item]");
+
+    fetch(resumeHref, { method: "HEAD" })
+      .then(function (response) {
+        /* Published: reveal any wrapper that ships hidden to avoid a flash. */
+        if (response.ok) {
+          resumeItems.forEach(function (item) {
+            item.removeAttribute("hidden");
+          });
+          return;
+        }
+        resumeLinks.forEach(function (link) {
+          link.setAttribute("hidden", "");
+        });
+        resumeItems.forEach(function (item) {
+          item.setAttribute("hidden", "");
+        });
+      })
+      .catch(function () {
+        /* network error — leave the links in place rather than hide a valid CTA */
+      });
+  }
+
   /* ---------- Footer year ---------- */
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) {

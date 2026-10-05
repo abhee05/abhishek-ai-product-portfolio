@@ -1,8 +1,12 @@
-# Abhishek Sachdeva — AI Product Portfolio
+# Abhishek Sachdeva — Product Manager Portfolio
 
-Clean, premium, enterprise-style portfolio for AI Product Manager / Product
-Owner opportunities. Plain HTML5, CSS3 and vanilla JavaScript. Deploys
-directly to Vercel. No build step, no framework, no database.
+Portfolio for **Product Manager / Product Owner — AI & GenAI Products** roles.
+Plain HTML5, CSS3 and vanilla JavaScript. Deploys directly to Vercel.
+No build step, no framework, no database.
+
+The site is evidence-first: two shipped, independently-owned products with full
+case studies, and an experience section that states real scope, metrics and
+outcomes from employer roles.
 
 ## Run locally
 
@@ -19,25 +23,27 @@ Or use `npx serve .`
 ## Project layout
 
 ```
-index.html                          Home: hero, about, experience, products, capabilities, contact
+index.html                          Home: hero, products, capabilities, approach, experience, contact
 case-study-regulatory-copilot.html  Flagship project 01 case study (30 sections)
 case-study-foodmood.html            Flagship project 02 case study (15 sections)
 css/styles.css                      Design system + all components (tokens at top)
 js/main.js                          Vanilla JS: nav, reveal-on-scroll, TOC, metric bars
-assets/favicon.svg                  Placeholder favicon
-assets/foodmood/README.md           Where to drop real FoodMood screenshots
+assets/favicon.svg                  Favicon
+assets/og-image.png                 Social preview image
+assets/foodmood/                    Real deployed FoodMood screenshots (WebP, 720w + 1440w)
+assets/Abhishek_Sachdeva_Product_Manager_Resume.pdf
+                                    Resume — see "Outstanding manual steps"
 docs/                               Internal maintenance docs (not on the public site)
   portfolio-strategy.md
   content-source-of-truth.md
   regulatory-copilot-case-study.md
-  future-project-template.md
 vercel.json                         Static deployment settings
 README.md
 ```
 
-## Case studies
+## Products
 
-Two flagship products, each with a full case study in this repository:
+Two shipped products, each with a full case study in this repository:
 
 1. **Regulatory Intelligence Copilot** (project 01) — a grounded, traceable AI
    research copilot for RBI KYC compliance teams, with real retrieval evaluation
@@ -51,30 +57,35 @@ Two flagship products, each with a full case study in this repository:
 Both are independent portfolio products — not employer or client work. Neither
 claims users, revenue or adoption numbers that do not exist.
 
-## Placeholders to replace before deploy
+## Outstanding manual steps
 
-Search the codebase for these tokens. All are flagged in the HTML with
-`<!-- PLACEHOLDER ... -->` comments.
+Both items are visible in the HTML and must be resolved by the owner.
 
-| Token | Replace with |
-| --- | --- |
-| `REPLACE_WITH_LIVE_PRODUCT_URL.example.com` | Deployed Streamlit app URL (3 spots) |
-| `ABHISHEK_GITHUB_HANDLE` | Abhishek's GitHub handle (hero + contact + repo links) |
-| `REPLACE_WITH_REPO_NAME` | The public GitHub repo name for the copilot |
-| `ABHISHEK_HANDLE` (LinkedIn) | Abhishek's LinkedIn handle (hero + contact) |
-| `REPLACE_WITH_EMAIL@example.com` | A contact email |
+| Item | Where | Action |
+| --- | --- | --- |
+| `ABHISHEK_HANDLE` (LinkedIn) | `index.html` hero + contact | Replace with the real public LinkedIn handle (2 links) |
+| Resume PDF | `assets/Abhishek_Sachdeva_Product_Manager_Resume.pdf` | Copy the PDF in and commit it |
 
-The Vercel canonical domain (`abhishek-ai-product-portfolio.vercel.app`) and
-`assets/og-image.png` are already resolved and committed.
+The View Resume CTA degrades gracefully: `js/main.js` probes the PDF with a
+`HEAD` request and hides every resume link if the file 404s, so the site never
+ships a dead link while the asset is pending. Once the file is committed the
+button appears automatically — no code change needed.
+
+Everything else is resolved: the Vercel canonical domain
+(`abhishek-ai-product-portfolio.vercel.app`), both GitHub repos, both live
+product URLs and the contact email are real and committed.
 
 ## How to extend
 
-- New project: follow `docs/future-project-template.md`, add a case-study
-  `.html`, and swap a "Coming Soon" card on `index.html`.
+- Adding a project is intentionally manual: only completed work is shown, so a
+  new product means writing its case study first, then adding an `<article
+  class="work">` block to `index.html`. No placeholder slots exist.
 - Product screenshots: capture from the live product and save into
-  `assets/<project>/` as WebP at two widths, then point the case study `<img>`
+  `assets/<project>/` as WebP at two widths, then point the case-study `<img>`
   tags at them with `srcset`. See `assets/foodmood/README.md`.
 - Style changes: edit the design tokens at the top of `css/styles.css`.
+- Position changes: read `docs/content-source-of-truth.md` first — it lists
+  which claims are verified and which are off-limits.
 
 ## Deploy to Vercel
 
