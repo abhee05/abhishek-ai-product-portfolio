@@ -2078,6 +2078,7 @@ hr {
 }
 
 .workflow li span {
+  grid-column: 2;
   color: var(--ink-mute);
   font-size: var(--step--1);
 }
@@ -2950,4 +2951,11 @@ hr {
   .cs-section {
     break-inside: avoid;
   }
+}
+
+/* Wide tables scroll inside their own box on narrow screens */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }

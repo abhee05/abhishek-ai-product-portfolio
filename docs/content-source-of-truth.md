@@ -164,3 +164,57 @@ authoritative list.
 LinkedIn is deliberately unpublished. The profile is not public yet, so the
 site ships no LinkedIn button, link or placeholder token. Add it only when a
 real URL exists — never a stub or a disabled control.
+## Section: Flagship product 03 identity — INDmoney SIP Discovery Engine
+
+Source: github.com/abhee05/indmoney-sip-discovery-engine (README, PROJECT_NOTES.md,
+mvp/README.md, data/processed/analysis.json, data/eval/golden_report.json,
+mvp/eval/report.json, docs/AI_Evidence_Log_draft.md). Re-check these before
+changing any number below.
+
+- **Context:** NextLeap PM Fellowship capstone (submitted 9 Nov 2026). Role
+  framing in the brief: Growth PM, INDmoney. Not affiliated with INDmoney; not
+  employer or client work; not investment advice.
+- **Goal:** raise 12-month SIP continuation for first-time MF investors.
+  Active SIP = at least one successful instalment in the last 30 days.
+- **Live discovery engine:** https://indmoney-sip-discovery.streamlit.app/
+- **MVP ("Before you pause"):** lives in `mvp/` of the same repo. No public URL
+  is published on the site yet — add one only when a real deployment URL exists.
+
+### Discovery engine numbers (do not alter)
+
+| Source | Collected | Unique | SIP/MF candidates | Core evidence |
+| --- | --- | --- | --- | --- |
+| Reddit | 11,358 | 10,273 | 5,062 | 172 |
+| YouTube | 2,866 | 2,635 | 634 | 33 |
+| Google Play | 2,572 | 2,389 | 203 | 14 |
+| TradingQ&A | 1,450 | 1,439 | 994 | 15 |
+| App Store | 243 | 237 | 30 | 4 |
+| Total | 18,489 | 16,973 | 6,923 | 238 |
+
+- 676 records AI-coded on an 18-field codebook; 665 passed gates first try,
+  8 after one retry, 3 rejected. 15 staff replies excluded. 66 core records are
+  explicit first-year investors.
+- Labeller split: 665 coded in-session by Claude against the codebook and
+  gates; 11 by openai/gpt-oss-120b on Groq.
+- Golden set: 20 blind, source-stratified records hand-labelled; field-level
+  agreement 46%; 2 of 20 fully agreed; product 80% (kappa 0.68), relevance
+  55% (0.39), journey stage 20% (0.135), investor experience 20% (-0.016),
+  unmet need 35% (-0.02). Must always be shown with its weakness stated.
+- Top need: neutral, non-advisory help at a moment of doubt — 87 mentions,
+  52% first-year, score index 100. Closest to a lapse: pause/skip/reduce
+  without losing the habit — 30 mentions, 47% at or near a lapse, index 59.
+- Opportunity score = reach × closeness to a lapse × first-year share ×
+  controllability (controllability is PM judgement).
+
+### MVP numbers (do not alter)
+
+- Golden set run 7 Nov 2026: 25 cases, 25 passed, labels confirmed by hand.
+  12 answer, 6 decline advice, 4 decline prediction, 3 fallback. 7 AI-written
+  answers, 0 blocked. Sources: 12 researcher edge cases, 4 INDmoney assistant
+  test, 6 interviews, 1 survey answer, 2 MVP user tests.
+- Interviewee names are never published.
+- AI writes sentences only; all numbers come from code (real NAVs from
+  mfapi.in / AMFI). Options: continue, skip once, lower amount, pause until a
+  month, stop. Skip once and Pause until are proposed features, not INDmoney
+  functionality.
+- No retention, adoption or user-count results exist. Never claim any.

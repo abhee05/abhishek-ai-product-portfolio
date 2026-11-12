@@ -4,8 +4,8 @@ Portfolio for **Product Manager / Product Owner — AI & GenAI Products** roles.
 Plain HTML5, CSS3 and vanilla JavaScript. Deploys directly to Vercel.
 No build step, no framework, no database.
 
-The site is evidence-first: two shipped, independently-owned products with full
-case studies, and an experience section that states real scope, metrics and
+The site is evidence-first: three working products with full case studies
+(two independent, one NextLeap PM Fellowship capstone), and an experience section that states real scope, metrics and
 outcomes from employer roles.
 
 ## Run locally
@@ -26,6 +26,7 @@ Or use `npx serve .`
 index.html                          Home: hero, products, capabilities, approach, experience, contact
 case-study-regulatory-copilot.html  Flagship project 01 case study (30 sections)
 case-study-foodmood.html            Flagship project 02 case study (15 sections)
+case-study-indmoney-sip.html        Flagship project 03 case study (13 sections)
 css/styles.css                      Design system + all components (tokens at top)
 js/main.js                          Vanilla JS: nav, reveal-on-scroll, TOC, metric bars
 assets/favicon.svg                  Favicon
@@ -43,7 +44,7 @@ README.md
 
 ## Products
 
-Two shipped products, each with a full case study in this repository:
+Three products, each with a full case study in this repository:
 
 1. **Regulatory Intelligence Copilot** (project 01) — a grounded, traceable AI
    research copilot for RBI KYC compliance teams, with real retrieval evaluation
@@ -54,8 +55,13 @@ Two shipped products, each with a full case study in this repository:
    Possible / Backup matches and mutual confirmation, deployed on Vercel with a
    Supabase backend.
 
-Both are independent portfolio products — not employer or client work. Neither
-claims users, revenue or adoption numbers that do not exist.
+3. **INDmoney SIP Discovery Engine** (project 03) — NextLeap PM Fellowship
+   capstone. An AI discovery engine (676 AI-coded records, quality gates, a
+   hand-labelled golden set reported at 46% agreement) and the "Before you
+   pause" MVP, evaluated on a 25-case golden set. Not affiliated with INDmoney.
+
+None of the three is employer or client work. None claims users, revenue,
+retention or adoption numbers that do not exist.
 
 ## Contact channels
 
