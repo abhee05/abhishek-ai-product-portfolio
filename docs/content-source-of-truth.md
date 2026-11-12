@@ -9,14 +9,17 @@ Internal only — update this file before changing claims anywhere else.
 
 | Role | Company | Dates |
 | --- | --- | --- |
-| Product Owner | Deloitte Shared Services India | Oct 2025 – Present |
-| Business Analyst | Wipro HR Services Pvt Ltd | Jul 2019 – Apr 2022 |
+| Consultant (Product Owner / AI Product) | Deloitte Shared Services India | Oct 2025 – Present |
+| Business Analyst (Product Owner) | Wipro HR Services Pvt Ltd | Jul 2019 – Apr 2022 |
 | Business Analyst | HCL Technologies | Feb 2017 – May 2019 |
 | Network Engineer | HCL Technologies | Feb 2015 – Jan 2017 |
 | Technical Support Consultant | Techvedic | Feb 2014 – Jan 2015 |
 
 Current (as of site build): the Deloitte role is in progress ("Present").
-Titles are taken from the resume and must not be inflated. There is a career
+Titles are taken from the resume and must not be inflated. The Wipro
+designation was Business Analyst; "(Product Owner)" describes the backlog
+ownership role the user held there and is shown in brackets exactly as on the
+resume (user decision, 12 Nov 2026). There is a career
 break between Apr 2022 and Oct 2025; it is stated on the site plainly (family
 business, closed in 2024, plus a skills refresh) and must never be dressed up
 as employment.
@@ -26,15 +29,16 @@ graduating 2017, 71.25%.
 
 ### Positioning rules
 
-- Target positioning is **Product Manager | Product Owner | AI & GenAI
-  Products**. This is the role being applied for, not an employment title, and
+- Target positioning is **AI Product Manager | GenAI, RAG & AI Agents**
+  (updated 12 Nov 2026; the user targets AI PM roles and does not want
+  Product Owner positioning). This is the role being applied for, not an employment title, and
   is fine to state. Individual roles keep their real resume titles.
 - No invented metrics, customers, employers, production deployments or
   promotion dates.
 - Employer product outcomes are presented as employer work and clearly
   attributed as such, never as independently owned products.
-- Both flagship products are independent portfolio products, not employer or
-  client work.
+- The flagship products are independent or fellowship projects, not employer
+  or client work.
 
 ## Section: Flagship product identity
 

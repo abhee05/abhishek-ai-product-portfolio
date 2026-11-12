@@ -3000,3 +3000,143 @@ hr {
 .work--light .delta-list .arrow {
   color: var(--ink-mute);
 }
+
+/* ---------- Hero: two-column layout with proof panel ---------- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 23rem);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.hero-main {
+  min-width: 0;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  font-size: var(--step--1);
+  font-weight: 560;
+  color: var(--ink-soft);
+}
+
+.hero-status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 3px var(--success-soft);
+}
+
+.hero-panel {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.hero-panel-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 620;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.hero-panel-list {
+  margin: 0;
+  display: grid;
+}
+
+.hero-panel-list > div {
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.hero-panel-list > div:first-child {
+  border-top: 0;
+  padding-top: 0.25rem;
+}
+
+.hero-panel-list dt {
+  font-size: 1.5rem;
+  font-weight: 680;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--accent);
+}
+
+.hero-panel-list dt .from {
+  color: var(--ink-mute);
+  font-weight: 500;
+}
+
+.hero-panel-list dt .arrow {
+  color: var(--ink-mute);
+  font-weight: 400;
+  margin-inline: 0.3em;
+}
+
+.hero-panel-list dd {
+  margin: 0.25rem 0 0;
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.hero-panel-list dd span {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 620;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.hero .hero-name {
+  font-size: clamp(2.6rem, 1.2rem + 5vw, 4.75rem);
+}
+
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-panel {
+    max-width: 34rem;
+  }
+}
+
+/* Space between the product number and its label */
+.work-index span:first-child {
+  margin-right: 0.75em;
+}
+
+/* Bracketed role note in the experience list */
+.role-title-note {
+  font-weight: 450;
+  color: var(--ink-mute);
+  font-size: 0.85em;
+}
+
+/* HCL track titles: give the title room so it stays on one line */
+.role-track li {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.role--lead .role-title-note {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: var(--step-0);
+  letter-spacing: 0;
+}
