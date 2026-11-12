@@ -164,3 +164,79 @@ authoritative list.
 LinkedIn is deliberately unpublished. The profile is not public yet, so the
 site ships no LinkedIn button, link or placeholder token. Add it only when a
 real URL exists — never a stub or a disabled control.
+## Section: Flagship product 03 identity — INDmoney SIP Discovery Engine
+
+Source: github.com/abhee05/indmoney-sip-discovery-engine (README, PROJECT_NOTES.md,
+mvp/README.md, data/processed/analysis.json, data/eval/golden_report.json,
+mvp/eval/report.json, docs/AI_Evidence_Log_draft.md). Re-check these before
+changing any number below.
+
+- **Context:** NextLeap PM Fellowship capstone (submitted 9 Nov 2026). Role
+  framing in the brief: Growth PM, INDmoney. Not affiliated with INDmoney; not
+  employer or client work; not investment advice.
+- **Goal:** raise 12-month SIP continuation for first-time MF investors.
+  Active SIP = at least one successful instalment in the last 30 days.
+- **Live discovery engine:** https://indmoney-sip-discovery.streamlit.app/
+- **Live MVP ("Before you pause"):** https://before-you-pause-sip.streamlit.app/
+  (code in `mvp/` of the same repo). Both Streamlit apps sleep when idle.
+- **AI Evidence Log (public Google Doc):** https://docs.google.com/document/d/1qAjIVJm72-ycdwgM3OVrUDAi8K4kqKG5/edit?usp=sharing
+- **Not published on the site:** the submitted deck PDF and the interview-notes
+  doc, because both name interviewees. Publish only anonymised versions.
+- Additional facts below (metric breakdown, research, RICE, user tests, GTM,
+  risks) come from the user's project handoff file and the submitted deck
+  NL_INDmoney.pdf (10 slides, 9 Nov 2026).
+
+### Discovery engine numbers (do not alter)
+
+| Source | Collected | Unique | SIP/MF candidates | Core evidence |
+| --- | --- | --- | --- | --- |
+| Reddit | 11,358 | 10,273 | 5,062 | 172 |
+| YouTube | 2,866 | 2,635 | 634 | 33 |
+| Google Play | 2,572 | 2,389 | 203 | 14 |
+| TradingQ&A | 1,450 | 1,439 | 994 | 15 |
+| App Store | 243 | 237 | 30 | 4 |
+| Total | 18,489 | 16,973 | 6,923 | 238 |
+
+- 676 records AI-coded on a 19-field codebook; 665 passed gates first try,
+  8 after one retry, 3 rejected. 15 staff replies excluded. 66 core records are
+  explicit first-year investors.
+- Labeller split: 665 coded in-session by Claude against the codebook and
+  gates; 11 by openai/gpt-oss-120b on Groq.
+- Golden set: 20 blind, source-stratified records hand-labelled; field-level
+  agreement 46%; 2 of 20 fully agreed; product 80% (kappa 0.68), relevance
+  55% (0.39), journey stage 20% (0.135), investor experience 20% (-0.016),
+  unmet need 35% (-0.02). Must always be shown with its weakness stated.
+- Top need: neutral, non-advisory help at a moment of doubt — 87 mentions,
+  52% first-year, score index 100. Closest to a lapse: pause/skip/reduce
+  without losing the habit — 30 mentions, 47% at or near a lapse, index 59.
+- Opportunity score = reach × closeness to a lapse × first-year share ×
+  controllability (controllability is PM judgement).
+
+### MVP numbers (do not alter)
+
+- Golden set run 7 Nov 2026: 25 cases, 25 passed, labels confirmed by hand.
+  12 answer, 6 decline advice, 4 decline prediction, 3 fallback. 7 AI-written
+  answers, 0 blocked. Sources: 12 researcher edge cases, 4 INDmoney assistant
+  test, 6 interviews, 1 survey answer, 2 MVP user tests.
+- Interviewee names are never published.
+- AI writes sentences only; all numbers come from code (real NAVs from
+  mfapi.in / AMFI). Options: continue, skip once, lower amount, pause until a
+  month, stop. Skip once and Pause until are proposed features, not INDmoney
+  functionality.
+- No retention, adoption or user-count results exist. Never claim any.
+
+### Research and product facts (from handoff + deck)
+
+- North Star: first-time investors who paid at least once in days 336-365 ÷
+  all first-time investors who started that month × 100. Chosen outcome O2:
+  % who see a loss and still invest 30 days later.
+- Research: 6 async written interviews (4-5 Nov 2026) + survey (8 replies,
+  6 qualified). Segment: first SIP in last 18 months. Sample all salaried,
+  aged 23-35, only 2 INDmoney users. Quotes may be published without names.
+- RICE: explainer at Pause/Stop 6.0 (chosen); skip/pause buttons 4.0; videos
+  and FAQs 2.0; red-SIP alert 1.4; general AI chat 0.8. Scores are estimates.
+- MVP: 6 code checks per AI answer; 30 unit tests passing; 3 user tests with
+  the changes listed on the case study page.
+- Market context (news reports of AMFI data): ~71 lakh new MF investors in the
+  year to April 2026; March 2026 SIPs stopped/ended 53.4 lakh vs started 52.8 lakh.
+- YouTube filter fix: candidates cut from 1,953 to 634.

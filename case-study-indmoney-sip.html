@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary meta -->
+  <title>INDmoney SIP Discovery Engine — AI Research &amp; MVP Case Study | Abhishek Sachdeva</title>
+  <meta name="description" content="Product case study: an AI discovery engine that labelled 676 public investor posts to find why first-time SIP investors stop, and 'Before you pause', a grounded MVP for the moment they tap Pause or Stop." />
+  <meta name="author" content="Abhishek Sachdeva" />
+  <link rel="canonical" href="https://abhishek-ai-product-portfolio.vercel.app/case-study-indmoney-sip.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="INDmoney SIP Discovery Engine — AI Research &amp; MVP Case Study" />
+  <meta property="og:description" content="From 18,489 public investor records to one product moment: an AI discovery engine with quality gates and a golden set, and a grounded 'Before you pause' MVP." />
+  <meta property="og:url" content="https://abhishek-ai-product-portfolio.vercel.app/case-study-indmoney-sip.html" />
+  <meta property="og:image" content="https://abhishek-ai-product-portfolio.vercel.app/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Abhishek Sachdeva Portfolio" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="INDmoney SIP Discovery Engine — AI Research &amp; MVP Case Study" />
+  <meta name="twitter:description" content="AI-coded discovery on 676 investor records, honest golden-set validation, and a grounded MVP for the moment a first-time investor taps Pause." />
+  <meta name="twitter:image" content="https://abhishek-ai-product-portfolio.vercel.app/assets/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ======================= HEADER / NAV ======================= -->
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Abhishek Sachdeva — home">
+        <span class="brand-mark" aria-hidden="true">AS</span>
+        <span class="brand-text">
+          <span class="brand-name">Abhishek Sachdeva</span>
+          <span class="brand-role">Product Manager &middot; AI &amp; GenAI</span>
+        </span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open menu"
+      ><span aria-hidden="true"></span></button>
+
+      <ul class="nav-links" id="primary-nav" data-nav-menu>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#capabilities">Capabilities</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= CASE STUDY HERO ======================= -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+      <div class="shell">
+        <div class="cs-topbar">
+          <a class="back-link" href="index.html#products" aria-label="Back to portfolio">
+            <span aria-hidden="true">←</span> Back to Portfolio
+          </a>
+          <div class="btn-row">
+            <a class="btn btn--ghost btn--sm" href="https://before-you-pause-sip.streamlit.app/" rel="noopener noreferrer" target="_blank">Open Live MVP</a>
+            <a class="btn btn--ghost btn--sm" href="https://indmoney-sip-discovery.streamlit.app/" rel="noopener noreferrer" target="_blank">Open Discovery Engine</a>
+            <a class="btn btn--ghost btn--sm" href="https://github.com/abhee05/indmoney-sip-discovery-engine" rel="noopener noreferrer" target="_blank">View GitHub</a>
+          </div>
+        </div>
+
+        <span class="card-tag">Product Case Study · NextLeap PM Fellowship Capstone</span>
+        <h1 id="cs-title">INDmoney SIP Discovery Engine</h1>
+        <p class="cs-subtitle">
+          First-time SIP investors start with good intent, but at their first
+          loss the app shows the number and not what it means &mdash; so they go
+          to Reddit or YouTube, then pause or stop. I used an AI discovery engine
+          over 18,489 public investor posts and user interviews to find that
+          moment, then built <strong>Before you pause</strong>: an AI explainer
+          that appears when they tap Pause or Stop, shows their own numbers and
+          history, declines advice, and offers every option, including Stop.
+        </p>
+
+        <dl class="cs-facts">
+          <div>
+            <dt>Role</dt>
+            <dd>Growth PM, INDmoney (fellowship case study)</dd>
+          </div>
+          <div>
+            <dt>Primary user</dt>
+            <dd>First-time SIP investors in their first 12 months</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>MVP and discovery engine live on Streamlit · submitted 9 Nov 2026</dd>
+          </div>
+          <div>
+            <dt>Principles</dt>
+            <dd>No advice · No forecasts · Numbers from code · Stop one tap away</dd>
+          </div>
+        </dl>
+        <!-- Scannable narrative arc. Every value below is restated from the
+             sections that follow; nothing new is claimed here. -->
+        <ol class="case-arc" aria-label="Case study at a glance">
+          <li>
+            <p class="case-arc-step">Goal</p>
+            <p class="case-arc-text">More first-time investors still paying into a SIP 12 months after their first instalment.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Discovery</p>
+            <p class="case-arc-text">18,489 posts &rarr; 676 AI-labelled &rarr; 238 core. Top need: neutral help when unsure (87 posts, 52% first-year).</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Research</p>
+            <p class="case-arc-text">6 interviews and a survey confirmed the moment of doubt &mdash; and showed the app is skipped because it feels like a salesman.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Problem</p>
+            <p class="case-arc-text">At the first loss, the app shows the number, not what it means. The fall is the trigger; the missing explanation is the cause.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">MVP</p>
+            <p class="case-arc-text">Before you pause, chosen by RICE: own numbers, honest history, checked AI answers, 5 options.</p>
+          </li>
+          <li>
+            <p class="case-arc-step">Evaluation</p>
+            <p class="case-arc-text">25 of 25 golden-set cases passed, 3 user tests drove fixes. Engine labels: 46% agreement, reported as directional.</p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ======================= CASE STUDY BODY ======================= -->
+    <div class="shell cs-layout">
+
+      <!-- TOC -->
+      <nav class="cs-toc" aria-label="Case study contents">
+        <p>Contents</p>
+        <ol>
+          <li><a data-toc-link href="#overview">Product Overview</a></li>
+          <li><a data-toc-link href="#metric">Goal &amp; Metric Breakdown</a></li>
+          <li><a data-toc-link href="#engine">AI Discovery Engine</a></li>
+          <li><a data-toc-link href="#quality">Quality Gates &amp; Golden Set</a></li>
+          <li><a data-toc-link href="#findings">What the Engine Found</a></li>
+          <li><a data-toc-link href="#research">User Research</a></li>
+          <li><a data-toc-link href="#problem">Problem Definition</a></li>
+          <li><a data-toc-link href="#solution">Solution Choice (RICE)</a></li>
+          <li><a data-toc-link href="#mvp">The MVP: Before You Pause</a></li>
+          <li><a data-toc-link href="#decisions">Key Product Decisions</a></li>
+          <li><a data-toc-link href="#mvp-eval">Evaluation &amp; User Tests</a></li>
+          <li><a data-toc-link href="#gtm">Go-to-Market &amp; Metrics</a></li>
+          <li><a data-toc-link href="#risks">Risks &amp; Limitations</a></li>
+          <li><a data-toc-link href="#role">My Role &amp; Tools</a></li>
+        </ol>
+      </nav>
+
+      <!-- CONTENT -->
+      <div class="cs-content">
+
+        <!-- 01 Overview -->
+        <section class="cs-section" id="overview" data-section aria-labelledby="overview-title">
+          <span class="section-number">01</span>
+          <h2 id="overview-title">Product Overview</h2>
+          <p>
+            Two working products answer one question. The <strong>discovery
+            engine</strong> is an AI research tool: it collects public investor
+            feedback, labels each post against the brief's nine questions, and
+            ranks unmet needs in code. <strong>Before you pause</strong> is the
+            MVP that came out of the research: a screen between a worried tap on
+            Pause or Stop and the decision itself.
+          </p>
+          <p>
+            Both follow one rule: the AI reads and writes language, code does
+            every count and calculation, and code checks decide what reaches the
+            user.
+          </p>
+          <div class="chip-row" role="group" aria-label="Product tags">
+            <span class="chip">Product Discovery</span>
+            <span class="chip">Metric Design</span>
+            <span class="chip">LLM Classification</span>
+            <span class="chip">AI Evaluation</span>
+            <span class="chip">Grounded Generation</span>
+            <span class="chip">Fintech</span>
+          </div>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">What</th><th scope="col">Where it lives</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>MVP: Before you pause</td><td><a href="https://before-you-pause-sip.streamlit.app/" rel="noopener noreferrer" target="_blank">before-you-pause-sip.streamlit.app</a> &mdash; Streamlit Community Cloud</td></tr>
+              <tr><td>AI discovery engine</td><td><a href="https://indmoney-sip-discovery.streamlit.app/" rel="noopener noreferrer" target="_blank">indmoney-sip-discovery.streamlit.app</a> &mdash; Streamlit Community Cloud</td></tr>
+              <tr><td>AI Evidence Log</td><td><a href="https://docs.google.com/document/d/1qAjIVJm72-ycdwgM3OVrUDAi8K4kqKG5/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Google Doc</a> &mdash; how the AI was used, checked and corrected</td></tr>
+              <tr><td>Source code</td><td><a href="https://github.com/abhee05/indmoney-sip-discovery-engine" rel="noopener noreferrer" target="_blank">github.com/abhee05/indmoney-sip-discovery-engine</a></td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="small muted">
+            Both apps run on the free Streamlit tier and sleep when idle. If you
+            see "Yes, get this app back up", click it; the app wakes in about a
+            minute.
+          </p>
+          <div class="callout callout--note">
+            <span class="callout-label">Project context</span>
+            <p>
+              <strong>This is my NextLeap PM Fellowship capstone</strong>,
+              submitted on 9 November 2026. I chose INDmoney from the three
+              products in the brief and worked as its Growth PM. Both apps are
+              concept prototypes: not affiliated with or endorsed by INDmoney,
+              not Deloitte, client or employer work, and not investment advice.
+            </p>
+          </div>
+        </section>
+
+        <!-- 02 Metric -->
+        <section class="cs-section" id="metric" data-section aria-labelledby="metric-title">
+          <span class="section-number">02</span>
+          <h2 id="metric-title">Goal &amp; Metric Breakdown</h2>
+          <p>
+            The brief's goal: increase the share of first-time mutual-fund
+            investors who still have an active SIP 12 months after their first
+            instalment. The brief ruled out fund recommendations and fear, FOMO
+            or urgency nudges.
+          </p>
+          <div class="callout callout--problem">
+            <span class="callout-label">North Star · 12-month active SIP rate</span>
+            <p>
+              First-time investors who paid at least once in days 336&ndash;365
+              &divide; all first-time investors who started that month &times; 100.
+              Paused two months and came back: counts. Stopped one SIP but kept
+              another: counts. A failed payment: does not count.
+            </p>
+          </div>
+          <p>
+            First-year SIPs stop in two ways: the investor <strong>loses
+            confidence (A)</strong>, or a <strong>payment fails (B)</strong>. I
+            broke the North Star into five product outcomes along the journey and
+            matched each to engine evidence:
+          </p>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr>
+                <th scope="col">Journey moment</th>
+                <th scope="col">Product outcome</th>
+                <th scope="col">Measure</th>
+                <th scope="col">Engine signal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Second payment</td><td>O1. Second payment succeeds (B)</td><td>% whose 2nd instalment works first time</td><td>6 posts on failed mandates</td></tr>
+              <tr><td><strong>First loss</strong></td><td><strong>O2. First loss is understood (A) &mdash; chosen</strong></td><td>% who see a loss and still invest 30 days later</td><td>87 asks for neutral help, 52% first-year</td></tr>
+              <tr><td>Months 2&ndash;4</td><td>O3. Keeps a reason to stay (A)</td><td>% who take any SIP action</td><td>29 stepped up, 11 check anxiously</td></tr>
+              <tr><td>After a failed payment</td><td>O4. Failed payments are recovered (B)</td><td>% of failures followed by a success within 30 days</td><td>Complaints of SIPs stopping with no alert</td></tr>
+              <tr><td>A tight month</td><td>O5. Tight month is not an exit (A)</td><td>% of changes that are skip or pause, not stop</td><td>47% of pause asks come from people about to stop</td></tr>
+            </tbody>
+          </table>
+          </div>
+        </section>
+
+        <!-- 03 Engine -->
+        <section class="cs-section" id="engine" data-section aria-labelledby="engine-title">
+          <span class="section-number">03</span>
+          <h2 id="engine-title">AI Discovery Engine</h2>
+          <p>
+            Answering nine research questions by hand-reading forums would take
+            weeks and could not be audited. The engine read 18,489 public posts
+            and checked every AI label in code.
+          </p>
+          <div class="flow" role="img" aria-label="Discovery engine pipeline">
+            <div class="flow-step is-accent">
+              <span class="step-num">1</span>
+              <span class="step-name">Collect</span>
+              <span class="step-detail">18,489 public posts; no login; authors stored as one-way hashes</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step">
+              <span class="step-num">2</span>
+              <span class="step-name">Filter</span>
+              <span class="step-detail">6,923 talk about SIPs or mutual funds</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step">
+              <span class="step-num">3</span>
+              <span class="step-name">AI labels</span>
+              <span class="step-detail">676 posts tagged on a 19-field codebook tied to the brief</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step">
+              <span class="step-num">4</span>
+              <span class="step-name">Code checks</span>
+              <span class="step-detail">Quote word for word, valid values, logic rules; one retry</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step is-output">
+              <span class="step-num">5</span>
+              <span class="step-name">Code counts</span>
+              <span class="step-detail">238 core posts; themes counted, opportunities scored</span>
+            </div>
+          </div>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr>
+                <th scope="col">Source</th>
+                <th scope="col">Collected</th>
+                <th scope="col">Unique</th>
+                <th scope="col">SIP / MF posts</th>
+                <th scope="col">Core</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Reddit (6 Indian investing subreddits)</td><td>11,358</td><td>10,273</td><td>5,062</td><td>172</td></tr>
+              <tr><td>YouTube comments on SIP videos</td><td>2,866</td><td>2,635</td><td>634</td><td>33</td></tr>
+              <tr><td>Google Play reviews (INDmoney)</td><td>2,572</td><td>2,389</td><td>203</td><td>14</td></tr>
+              <tr><td>TradingQ&amp;A</td><td>1,450</td><td>1,439</td><td>994</td><td>15</td></tr>
+              <tr><td>App Store reviews (INDmoney)</td><td>243</td><td>237</td><td>30</td><td>4</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>18,489</strong></td><td><strong>16,973</strong></td><td><strong>6,923</strong></td><td><strong>238</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+          <h3>The opportunity score</h3>
+          <p>
+            Each unmet need is ranked by <strong>reach &times; closeness to
+            stopping &times; first-year weight &times; controllability</strong>.
+            The first three come from the data; controllability is my judgement
+            of how much INDmoney can act on it, and is adjustable in the app.
+          </p>
+        </section>
+
+        <!-- 04 Quality -->
+        <section class="cs-section" id="quality" data-section aria-labelledby="quality-title">
+          <span class="section-number">04</span>
+          <h2 id="quality-title">Quality Gates &amp; Golden Set</h2>
+          <p>
+            Every AI label had to pass code checks before it counted: an
+            <strong>exact supporting quote</strong> from the post, values only
+            from the codebook, and consistent logic. A failing label got one
+            retry, then was excluded &mdash; 3 labels were left out.
+          </p>
+          <h3>Did the AI label like a researcher would?</h3>
+          <p>
+            Before looking at any AI output, I hand-labelled a blind,
+            source-stratified sample of 20 posts and compared field by field.
+          </p>
+          <div class="bar-area" data-bars>
+            <div class="bar-row" data-bar="0.80">
+              <div class="bar-head"><span class="name">Product (which platform)</span><span class="val">80% · &kappa; 0.68</span></div>
+              <div class="bar-track"><div class="bar-fill is-accent"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.55">
+              <div class="bar-head"><span class="name">Relevance</span><span class="val">55% · &kappa; 0.39</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.55">
+              <div class="bar-head"><span class="name">Drop trigger</span><span class="val">55% · &kappa; 0.22</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.55">
+              <div class="bar-head"><span class="name">Continuation risk</span><span class="val">55% · &kappa; 0.24</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.35">
+              <div class="bar-head"><span class="name">Unmet need</span><span class="val">35% · &kappa; &minus;0.02</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.20">
+              <div class="bar-head"><span class="name">Journey stage</span><span class="val">20% · &kappa; 0.14</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.20">
+              <div class="bar-head"><span class="name">Investor experience</span><span class="val">20% · &kappa; &minus;0.02</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+          </div>
+          <p>
+            Overall agreement was <strong>46%</strong>. The failure pattern was
+            consistent: the AI was too literal, answering <em>unknown</em> or
+            <em>none</em> where I read implicit context. So it
+            <strong>under-counts</strong> first-year and at-risk signals rather
+            than inventing them &mdash; its counts are floors.
+          </p>
+          <p>
+            Reviewing output also caught a filter bug that let in off-topic
+            YouTube comments; fixing it cut YouTube candidates from 1,953 to 634.
+          </p>
+          <div class="callout callout--warn">
+            <span class="callout-label">What this result means</span>
+            <p>
+              46% is not good enough to treat the engine as measurement. I used
+              it to <strong>rank where to look</strong> and surface exact quotes,
+              then tested the leading need in interviews and a survey. Reporting
+              the weak number is the point: it decided how much weight the
+              engine's output could carry.
+            </p>
+          </div>
+        </section>
+
+        <!-- 05 Findings -->
+        <section class="cs-section" id="findings" data-section aria-labelledby="findings-title">
+          <span class="section-number">05</span>
+          <h2 id="findings-title">What the Engine Found</h2>
+          <p>
+            When new investors are unsure, they go to Reddit and YouTube, not to
+            their app. One need led by a wide margin: <strong>neutral help when
+            unsure</strong> &mdash; 87 posts, 52% from first-year investors.
+          </p>
+          <div class="bar-area" data-bars>
+            <div class="bar-row" data-bar="1.00">
+              <div class="bar-head"><span class="name">Neutral help when unsure · 87 posts</span><span class="val">100</span></div>
+              <div class="bar-track"><div class="bar-fill is-accent"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.59">
+              <div class="bar-head"><span class="name">Pause without quitting · 30 posts, 47% at risk</span><span class="val">59</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.28">
+              <div class="bar-head"><span class="name">Understand what is normal · 26 posts</span><span class="val">28</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.16">
+              <div class="bar-head"><span class="name">Payments that just work · 14 posts</span><span class="val">16</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-row" data-bar="0.10">
+              <div class="bar-head"><span class="name">Know if my SIP is on track · 16 posts</span><span class="val">10</span></div>
+              <div class="bar-track"><div class="bar-fill"></div></div>
+            </div>
+            <div class="bar-legend">
+              <span>Opportunity score (top need = 100)</span>
+            </div>
+          </div>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">Brief question</th><th scope="col">What the engine found (posts)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Why start, what they expect</td><td>A named goal 14, building wealth 8. 10 expected quick gains, 4 slow growth</td></tr>
+              <tr><td>What changes after starting</td><td>Step up or add SIPs 29, stop or redeem 14, ask outside 14, switch funds 13</td></tr>
+              <tr><td>What leads to a pause or stop</td><td>Low returns 15, losses in a fall 11, switching 9, lost trust 7, cash crunch 6</td></tr>
+              <tr><td>What they check</td><td>Total gain or loss 28, XIRR 13. Daily at first 6, rarely 6</td></tr>
+              <tr><td>What confuses them in the app</td><td>Hard pause or stop flow 15, failed instalments 12, unclear charges 11</td></tr>
+              <tr><td><strong>Outside the app</strong></td><td><strong>Reddit or forums 52, YouTube 20, an adviser only 3</strong></td></tr>
+              <tr><td>What keeps continuers going</td><td>Long-term belief 17, it runs on its own 9, learned dips are normal 4</td></tr>
+              <tr><td>How segments differ</td><td>First-timers need neutral help (33 of 40). Experienced investors are more at risk (24% vs 5%)</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="small muted">
+            Based on 238 core posts. Counts under 15 show a pattern, not its
+            size. At-risk investors complain about the pause flow four times as
+            often as continuers (20% vs 5%).
+          </p>
+        </section>
+
+        <!-- 06 Research -->
+        <section class="cs-section" id="research" data-section aria-labelledby="research-title">
+          <span class="section-number">06</span>
+          <h2 id="research-title">User Research</h2>
+          <p>
+            Interviews confirmed the moment of doubt &mdash; and explained why
+            the app is skipped.
+          </p>
+          <ul>
+            <li><strong>Segment:</strong> first-ever SIP started in the last 18 months (18, not 12, so they could recall all of year one).</li>
+            <li><strong>Method:</strong> 6 async written interviews, then a Google Form survey to check scale (8 replies, 6 qualified).</li>
+            <li><strong>Platforms used:</strong> Groww, Zerodha Coin, Paytm Money, INDmoney and a bank app.</li>
+          </ul>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">What we asked</th><th scope="col">What we heard</th><th scope="col">Vs engine</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Why they started</td><td>A colleague's or family's word (4 of 6 survey). 3 of 6 interviewees expected quick gains</td><td>Confirmed</td></tr>
+              <tr><td>Experience since</td><td>All 6 survey respondents have seen their SIP below what they put in</td><td>Confirmed</td></tr>
+              <tr><td>Paused or stopped, and why</td><td>A loss (2 interviewees), a cash crunch (3 of 6, more than the engine showed), a failed payment (2 of 6)</td><td><strong>Challenged</strong></td></tr>
+              <tr><td>What they check</td><td>Total gain or loss first, often in month one. One checked 4 times a day at &minus;7%</td><td>Confirmed</td></tr>
+              <tr><td>Outside the app</td><td>YouTube, Reddit, colleagues, ChatGPT. No survey respondent used the app's help</td><td>Confirmed</td></tr>
+              <tr><td>What would help</td><td>A neutral explanation; the app felt like a "digital salesman". Without one, they pick the bluntest exit</td><td><strong>New: trust gap</strong></td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="point-grid">
+            <div class="point-card"><span class="point-index">Q1</span><h4>&ldquo;I just wanted someone to tell me, &lsquo;Don't worry&hellip;&rsquo;&rdquo;</h4><p>First-year investor who paused at &minus;7%.</p></div>
+            <div class="point-card"><span class="point-index">Q2</span><h4>&ldquo;I need help understanding market logic.&rdquo;</h4><p>First-year investor who nearly paused.</p></div>
+            <div class="point-card"><span class="point-index">Q3</span><h4>&ldquo;It feels like a digital salesman.&rdquo;</h4><p>On the app's own help.</p></div>
+          </div>
+          <p>
+            The survey also showed wrong expectations are not the whole story: 4
+            of 6 expected slow growth, yet 3 of those 4 still paused or stopped
+            over low returns, a loss or a tight month.
+          </p>
+          <p class="small muted">
+            Market context (news reports of AMFI data): India added about 71
+            lakh new mutual-fund investors in the year to April 2026, and in
+            March 2026 more SIPs stopped or ended (53.4 lakh) than started (52.8
+            lakh). INDmoney's own numbers are not public.
+          </p>
+        </section>
+
+        <!-- 07 Problem -->
+        <section class="cs-section" id="problem" data-section aria-labelledby="problem-title">
+          <span class="section-number">07</span>
+          <h2 id="problem-title">Problem Definition</h2>
+          <div class="callout callout--problem">
+            <span class="callout-label">Root cause</span>
+            <p>
+              At the first loss, <strong>the app shows the number but not what it
+              means</strong>. Its help is built for technical issues, and it
+              sells. So investors leave the app for an explanation &mdash; and,
+              without a trusted one, pause or stop.
+            </p>
+          </div>
+          <ul>
+            <li><strong>Segment:</strong> first-time SIP investors on INDmoney in their first 12 months.</li>
+            <li><strong>Moment:</strong> the first time their SIP shows less than they put in, and they open the app to pause or stop.</li>
+            <li><strong>Outcome to move (O2):</strong> % who see a loss and still invest 30 days later.</li>
+            <li><strong>INDmoney today</strong> (checked 3 and 7 Nov 2026): the Stop screen says "You'll miss out"; the assistant says "I can't decide that for you", then "Reply Yes to stop it"; there is no skip or pause button.</li>
+          </ul>
+          <div class="callout callout--solution">
+            <span class="callout-label">Not "investors stop when markets fall"</span>
+            <p>
+              The fall is only the trigger. They started with good intent, but no
+              one they trust explains what they see. That reframe moves the
+              solution from market timing (impossible) to explanation (buildable).
+            </p>
+          </div>
+          <p>
+            <strong>Hypothesis:</strong> if first-time investors understand their
+            own loss when they tap Pause or Stop, more will still be investing 30
+            days later. <strong>Assumptions to test:</strong> doubt, not cash,
+            drives most first-loss stops; people will read an explanation at that
+            moment; honest history does not feel like selling.
+          </p>
+        </section>
+
+        <!-- 08 Solution -->
+        <section class="cs-section" id="solution" data-section aria-labelledby="solution-title">
+          <span class="section-number">08</span>
+          <h2 id="solution-title">Solution Choice (RICE)</h2>
+          <p>
+            Put the help where the doubt happens: when someone taps Pause or Stop.
+          </p>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr>
+                <th scope="col">Option</th>
+                <th scope="col">Reach</th>
+                <th scope="col">Impact</th>
+                <th scope="col">Confidence</th>
+                <th scope="col">Effort</th>
+                <th scope="col">RICE</th>
+                <th scope="col">Decision</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Explainer at Pause or Stop</strong></td><td>5</td><td>3</td><td>0.8</td><td>2</td><td><strong>6.0</strong></td><td><strong>Chosen</strong></td></tr>
+              <tr><td>Skip and pause buttons only</td><td>5</td><td>1</td><td>0.8</td><td>1</td><td>4.0</td><td>Part of the chosen screen</td></tr>
+              <tr><td>Learning videos and FAQs</td><td>8</td><td>1</td><td>0.5</td><td>2</td><td>2.0</td><td>No: generic, YouTube exists</td></tr>
+              <tr><td>Alert when the SIP turns red</td><td>7</td><td>1</td><td>0.4</td><td>2</td><td>1.4</td><td>No: unasked, feels like a nudge</td></tr>
+              <tr><td>General AI chat in the app</td><td>6</td><td>1</td><td>0.4</td><td>3</td><td>0.8</td><td>No: exists today, loops and sells</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="small muted">
+            My estimates. Reach 1&ndash;10, Impact 1&ndash;3 (on O2), Confidence
+            0&ndash;1, Effort 1&ndash;5. Impact is 3 because it answers the doubt
+            itself; confidence is 0.8 from 6 interviews and 3 MVP tests; effort
+            is 2 because code does the maths on public fund prices and the AI
+            only writes sentences.
+          </p>
+          <div class="callout callout--note">
+            <span class="callout-label">Where AI earns its place</span>
+            <p>
+              It reads <em>why</em> someone came &mdash; a loss, cash, "should I
+              stop?" &mdash; and explains their own numbers in plain words. A
+              non-AI version (a fixed chart or FAQ) shows everyone the same thing
+              and cannot answer the follow-up question.
+            </p>
+          </div>
+        </section>
+
+        <!-- 09 MVP -->
+        <section class="cs-section" id="mvp" data-section aria-labelledby="mvp-title">
+          <span class="section-number">09</span>
+          <h2 id="mvp-title">The MVP: Before You Pause</h2>
+          <div class="btn-row" style="margin: 0 0 1rem">
+            <a class="btn btn--accent btn--sm" href="https://before-you-pause-sip.streamlit.app/" rel="noopener noreferrer" target="_blank">Open Live MVP</a>
+          </div>
+          <ol class="workflow">
+            <li>
+              <strong>Tap Pause or Stop, and say why.</strong>
+              <span>Asked first, so the explanation fits the reason. Giving a reason is optional.</span>
+            </li>
+            <li>
+              <strong>See where you stand.</strong>
+              <span>Your own SIP numbers from real fund prices, and how every past SIP like yours did at the same point &mdash; bad cases included.</span>
+            </li>
+            <li>
+              <strong>Ask anything.</strong>
+              <span>The AI writes the answer and code checks it before it shows. Fund picks and forecasts are declined.</span>
+            </li>
+            <li>
+              <strong>Pick one of five options.</strong>
+              <span>Continue, skip once, pause until a month, lower the amount, or stop. Stop is always one tap away.</span>
+            </li>
+          </ol>
+          <h3>How it is built</h3>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">Step</th><th scope="col">Done by</th><th scope="col">How</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Fund prices</td><td>Code</td><td>Live NAVs for any Indian mutual fund (AMFI data via mfapi.in); saved copies if the API is down</td></tr>
+              <tr><td>SIP maths and history base rates</td><td>Code</td><td>Replayed past dips use no future prices</td></tr>
+              <tr><td>Routing a question</td><td>Code</td><td>Rule-based: advice, prediction, failed payment, cash, options, XIRR, stop or doubt</td></tr>
+              <tr><td>Declining advice and forecasts</td><td>Code</td><td>Before the AI: points to the fund's riskometer, a SEBI-registered adviser and investor.sebi.gov.in</td></tr>
+              <tr><td>Writing the explanation</td><td>AI</td><td>Groq, gpt-oss-120b, drafting only from the computed numbers</td></tr>
+              <tr><td>Checking every answer</td><td>Code</td><td>6 checks; one retry, then a written fallback answer</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="small muted">
+            No real SIP is changed, and the app says it is not investment advice.
+            A fund with too little history gets "not enough data to say".
+          </p>
+        </section>
+
+        <!-- 10 Decisions -->
+        <section class="cs-section" id="decisions" data-section aria-labelledby="dec-title">
+          <span class="section-number">10</span>
+          <h2 id="dec-title">Key Product Decisions</h2>
+          <div class="decision-grid">
+            <div class="decision-card">
+              <div class="dc-head">Decision · Intervene at the tap</div>
+              <div class="dc-body">
+                <p>The product appears when someone taps Pause or Stop, not as a general education feed.</p>
+                <div class="tradeoff"><strong>Why</strong>The top need and the highest stop risk meet at that moment. Help anywhere else competes for attention; help at the tap answers a question the user is asking right now.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Code computes, AI only writes</div>
+              <div class="dc-body">
+                <p>Every number comes from code; an AI sentence with a number the code did not produce is blocked.</p>
+                <div class="tradeoff"><strong>Why</strong>A wrong return figure in a money product destroys trust instantly. Language is where an LLM adds value; arithmetic is where it adds risk.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Show the bad cases too</div>
+              <div class="dc-body">
+                <p>History includes every past SIP of the same length, including ones that stayed below the amount invested.</p>
+                <div class="tradeoff"><strong>Why</strong>Showing only recoveries would be a nudge dressed as data &mdash; exactly what the brief ruled out.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Decline before the AI</div>
+              <div class="dc-body">
+                <p>Advice and forecast questions are routed away in code and never reach the model.</p>
+                <div class="tradeoff"><strong>Why</strong>These are the questions users most want answered and the product must never answer. A rule is more reliable than asking a model to refuse.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Stop is one tap away</div>
+              <div class="dc-body">
+                <p>All five options are always visible; Stop is never slowed down, and giving a reason is optional.</p>
+                <div class="tradeoff"><strong>Why</strong>The goal is a better-informed decision, not retention at any cost. Blocking the exit would raise saves briefly and destroy trust.</div>
+              </div>
+            </div>
+            <div class="decision-card">
+              <div class="dc-head">Decision · Cash options first, with no pressure</div>
+              <div class="dc-body">
+                <p>Skip once, pause until and lower the amount sit beside Continue and Stop.</p>
+                <div class="tradeoff"><strong>Why</strong>Research showed cash crunches matter more than the engine suggested. A tight month should have a softer exit than stopping.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11 Evaluation -->
+        <section class="cs-section" id="mvp-eval" data-section aria-labelledby="mvpeval-title">
+          <span class="section-number">11</span>
+          <h2 id="mvpeval-title">Evaluation &amp; User Tests</h2>
+          <p>
+            Every AI answer passes six code checks: numbers match the code, no
+            advice, no forecast, no pressure or urgency, the past-performance
+            warning is present, and length.
+          </p>
+          <p>
+            The golden set has 25 questions, each labelled by hand: tests of
+            INDmoney's assistant, interview quotes, a survey answer, edge cases
+            (including Hinglish) and two questions from user test 3.
+          </p>
+          <div class="metric-grid" aria-label="Final evaluation, 7 Nov 2026">
+            <div class="metric-card">
+              <span class="metric-label">Cases passed</span>
+              <span class="metric-value">25 / 25</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Right behaviour</span>
+              <span class="metric-value">25 / 25</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Checks clean</span>
+              <span class="metric-value">25 / 25</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">AI answers blocked</span>
+              <span class="metric-value">0</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Unit tests passing</span>
+              <span class="metric-value">30</span>
+            </div>
+          </div>
+          <h3>Three user tests, three rounds of fixes</h3>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">Tester</th><th scope="col">What happened</th><th scope="col">What I changed</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1 (v1)</td><td>Setup took 4 minutes. "Now I feel I am not the only one." Chose Continue</td><td>Simpler start, a 4-step guide</td></tr>
+              <tr><td>2 (v1)</td><td>Could not find their fund; saw "n/a". "It didn't change anything."</td><td>Better fund search; no "n/a"; closed funds explained</td></tr>
+              <tr><td>3 (v2)</td><td>One advice question slipped past the check. Lowered the SIP to &#8377;4,500. "It helped."</td><td>Fixed the check; added the question to the golden set</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="callout callout--note">
+            <span class="callout-label">On what these results are</span>
+            <p>
+              25 of 25 shows the product behaves as specified on the cases I
+              tested, and the user tests show it can help. Neither shows it raises
+              continuation &mdash; that needs the pilot below. Next for the
+              product: open it straight from the Pause button, with no setup.
+            </p>
+          </div>
+        </section>
+
+        <!-- 12 GTM -->
+        <section class="cs-section" id="gtm" data-section aria-labelledby="gtm-title">
+          <span class="section-number">12</span>
+          <h2 id="gtm-title">Go-to-Market &amp; Success Metrics</h2>
+          <p>
+            Launch in stages, and grow only if more SIPs survive without a harder
+            Stop.
+          </p>
+          <div class="flow" role="img" aria-label="Go-to-market stages">
+            <div class="flow-step is-accent">
+              <span class="step-num">1</span>
+              <span class="step-name">Validate</span>
+              <span class="step-detail">More first-year investors; legal review of the wording</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step">
+              <span class="step-num">2</span>
+              <span class="step-name">Pilot</span>
+              <span class="step-detail">A small share of first-year investors at Pause or Stop; A/B vs today's flow</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step">
+              <span class="step-num">3</span>
+              <span class="step-name">Staged rollout</span>
+              <span class="step-detail">All first-year investors, only if the save rate rises and no guardrail worsens</span>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step is-output">
+              <span class="step-num">4</span>
+              <span class="step-name">Scale</span>
+              <span class="step-detail">Every investor; reuse after failed payments and tight months</span>
+            </div>
+          </div>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">Type</th><th scope="col">Metric</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>North Star</td><td>% of first-time investors who paid at least once in days 336&ndash;365</td></tr>
+              <tr><td>Lagging</td><td><strong>First-loss save rate (primary):</strong> % who see a loss in year one and still invest 30 days later · 12-month active rate, screen vs no screen</td></tr>
+              <tr><td>Leading</td><td>Save rate: % who open the screen and pick anything but Stop · Pause return: % of pauses restarted by the chosen month · Helped: % who answer "Yes, it helped"</td></tr>
+              <tr><td>Guardrails</td><td>Taps from Stop to stopped, no more than today · % of skips or lower amounts followed by a failed debit · Average SIP amount of those who stay</td></tr>
+              <tr><td>AI quality</td><td>Golden set: 100% right on declines, re-run after every change · Live: % of answers blocked, plus 50 answers read by a person each week</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="callout callout--solution">
+            <span class="callout-label">Why the guardrails matter</span>
+            <p>
+              A save that only delays the stop is not a win. Pause return and
+              amount kept catch it, and the taps-to-stop guardrail keeps the exit
+              as easy as it is today.
+            </p>
+          </div>
+        </section>
+
+        <!-- 13 Risks -->
+        <section class="cs-section" id="risks" data-section aria-labelledby="risks-title">
+          <span class="section-number">13</span>
+          <h2 id="risks-title">Risks &amp; Limitations</h2>
+          <p>
+            The biggest risk: an honest explanation read as a promise, or as a
+            push to stay.
+          </p>
+          <div class="table-scroll">
+          <table class="risk-table">
+            <thead>
+              <tr><th scope="col">Risk</th><th scope="col">How it's reduced</th><th scope="col">How we'd know</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Read as a promise of recovery (seen in testing)</td><td>Next version shows the worst case first; a warning beside every number</td><td>Weekly review of 50 answers</td></tr>
+              <tr><td>Feels like blocking the exit</td><td>Stop always one tap away; reason optional</td><td>Guardrail: taps to stop</td></tr>
+              <tr><td>Seen as advice, by users or a regulator</td><td>Fund picks declined before the AI; 6 checks; legal review</td><td>Golden set: 100% on declines</td></tr>
+              <tr><td>Keeps people in a SIP they cannot afford</td><td>Skip, pause and lower shown first, with no pressure</td><td>Guardrail: bounce charges</td></tr>
+              <tr><td>Most stops are about cash, not doubt</td><td>Cash options already there; the pilot records reasons</td><td>Share who pick "money is tight"</td></tr>
+              <tr><td>People skip the explanation</td><td>Lead with their own numbers; keep it short</td><td>Save rate no better than today</td></tr>
+              <tr><td>Price data late or wrong</td><td>Fund house price feed; price date always shown</td><td>Wrong numbers in the review</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <ul>
+            <li><strong>Small sample:</strong> 6 interviews and 6 survey answers, all salaried, aged 23&ndash;35, and only 2 INDmoney users.</li>
+            <li><strong>Directional engine:</strong> 46% agreement with hand labels; public posts over-represent complaints.</li>
+            <li><strong>No company data:</strong> INDmoney's own numbers are not public.</li>
+            <li><strong>Standalone prototype:</strong> it ignores tax and exit load.</li>
+          </ul>
+          <div class="callout callout--warn">
+            <span class="callout-label">What I am not claiming</span>
+            <p>
+              No retention uplift, user numbers or adoption are claimed. The MVP
+              has not been piloted, so there is no evidence base for any of them.
+            </p>
+          </div>
+        </section>
+
+        <!-- 14 Role -->
+        <section class="cs-section" id="role" data-section aria-labelledby="role-title">
+          <span class="section-number">14</span>
+          <h2 id="role-title">My Role &amp; Tools</h2>
+          <p>
+            I owned the project end to end: the metric breakdown, research
+            questions, codebook and quality gates, the hand-labelled golden set,
+            the opportunity score, interviews and survey, problem definition,
+            RICE, MVP scope and guardrails, the evaluation, user tests and the
+            go-to-market plan.
+          </p>
+          <ul class="source-list">
+            <li><span class="source-type">Engine</span><span><strong>Python + Streamlit</strong><br />Collection, filtering, code checks, analysis and the live discovery app.</span></li>
+            <li><span class="source-type">AI</span><span><strong>LLM labelling against a fixed codebook</strong><br />Of 676 labelled posts, 665 were labelled in an assisted session with Claude and 11 by gpt-oss-120b on Groq, all through the same codebook and code checks.</span></li>
+            <li><span class="source-type">MVP</span><span><strong>Streamlit + Groq (gpt-oss-120b)</strong><br />The AI writes explanations; code handles maths, routing and every check.</span></li>
+            <li><span class="source-type is-internal">Data</span><span><strong>Real fund NAVs</strong><br />Daily prices from mfapi.in (AMFI data), cached for resilience.</span></li>
+          </ul>
+          <div class="callout callout--warn">
+            <span class="callout-label">Credit where it is due</span>
+            <p>
+              AI tooling accelerated coding, labelling and implementation. The
+              metric breakdown, research design, scoring logic, the choice of the
+              Pause moment, the guardrails and the decision to report the weak
+              golden-set result were product decisions, and they are mine.
+            </p>
+          </div>
+        </section>
+
+        <!-- END CTA -->
+        <section class="cs-end" aria-labelledby="end-title">
+          <h2 id="end-title">The point of this build</h2>
+          <p>
+            Using AI to do discovery at a scale one researcher can't, measuring
+            honestly how far to trust it, checking it against real users, and
+            turning the strongest signal into a grounded product moment with
+            guardrails I can test.
+          </p>
+          <div class="btn-row" style="justify-content: center">
+            <a class="btn btn--accent" href="https://before-you-pause-sip.streamlit.app/" rel="noopener noreferrer" target="_blank">Open Live MVP</a>
+            <a class="btn btn--ghost" href="https://indmoney-sip-discovery.streamlit.app/" rel="noopener noreferrer" target="_blank">Open Discovery Engine</a>
+            <a class="btn btn--ghost" href="case-study-foodmood.html">Read the FoodMood case study</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span data-year>2026</span> Abhishek Sachdeva · AI Product Portfolio</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">AI Products</a>
+        <a href="case-study-indmoney-sip.html" aria-current="page">SIP Discovery Case Study</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
