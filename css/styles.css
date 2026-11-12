@@ -2959,3 +2959,44 @@ hr {
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
 }
+
+/* Pipeline + deltas on a light product card */
+.work--light .pipeline figcaption,
+.work--light .deltas-cap {
+  color: var(--ink-mute);
+}
+
+.work--light .pipeline-flow li {
+  background: var(--bg-alt);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.work--light .pipeline-flow li:hover {
+  border-color: var(--accent);
+}
+
+.work--light .pipeline-flow li::before {
+  color: var(--accent);
+}
+
+.work--light .deltas {
+  border-top-color: var(--line);
+}
+
+.work--light .delta-list dt {
+  color: var(--ink-mute);
+}
+
+.work--light .delta-list .from {
+  color: var(--ink-mute);
+  text-decoration-color: var(--line);
+}
+
+.work--light .delta-list .to {
+  color: var(--accent);
+}
+
+.work--light .delta-list .arrow {
+  color: var(--ink-mute);
+}

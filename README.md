@@ -25,8 +25,8 @@ Or use `npx serve .`
 ```
 index.html                          Home: hero, products, capabilities, approach, experience, contact
 case-study-regulatory-copilot.html  Flagship project 01 case study (30 sections)
-case-study-foodmood.html            Flagship project 02 case study (15 sections)
-case-study-indmoney-sip.html        Flagship project 03 case study (13 sections)
+case-study-indmoney-sip.html        Flagship project 02 case study (13 sections)
+case-study-foodmood.html            Flagship project 03 case study (15 sections)
 css/styles.css                      Design system + all components (tokens at top)
 js/main.js                          Vanilla JS: nav, reveal-on-scroll, TOC, metric bars
 assets/favicon.svg                  Favicon
@@ -50,12 +50,12 @@ Three products, each with a full case study in this repository:
    research copilot for RBI KYC compliance teams, with real retrieval evaluation
    numbers and transparent reporting of its partially-completed generation
    evaluation.
-2. **FoodMood** (project 02) — a real-time, two-person food decision product.
+2. **FoodMood** (project 03) — a real-time, two-person food decision product.
    Private preference capture, three-level reactions, derived Perfect /
    Possible / Backup matches and mutual confirmation, deployed on Vercel with a
    Supabase backend.
 
-3. **INDmoney SIP Discovery Engine** (project 03) — NextLeap PM Fellowship
+3. **INDmoney SIP Discovery Engine** (project 02) — NextLeap PM Fellowship
    capstone. An AI discovery engine (676 AI-coded records, quality gates, a
    hand-labelled golden set reported at 46% agreement) and the "Before you
    pause" MVP, evaluated on a 25-case golden set. Not affiliated with INDmoney.

@@ -47,8 +47,8 @@ Everything on the public site either supports those four goals or gets cut.
 | --- | --- |
 | `index.html` | Home: hero, products, capabilities, approach, experience, contact |
 | `case-study-regulatory-copilot.html` | Flagship project 01 case study (full 30 sections) |
-| `case-study-foodmood.html` | Flagship project 02 case study (15 sections) |
-| `case-study-indmoney-sip.html` | Flagship project 03 case study (13 sections) — NextLeap fellowship capstone |
+| `case-study-indmoney-sip.html` | Flagship project 02 case study (13 sections) — NextLeap fellowship capstone |
+| `case-study-foodmood.html` | Flagship project 03 case study (15 sections) |
 | `css/styles.css` | Single stylesheet, design tokens at top |
 | `js/main.js` | Vanilla JS: nav, reveal-on-scroll, TOC, animated metric bars |
 | `assets/` | favicon, og-image, per-project screenshot folders, resume PDF |
